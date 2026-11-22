@@ -12,10 +12,9 @@
 
   <style>
     /* ==========================================================================
-       1. IMPERIAL ROYAL BLUE & LIQUID METALLIC GOLD TOKENS
+       1. IMPERIAL ROYAL BLUE & LIQUID METALLIC GOLD TOKENS (PERFORMANCE OPTIMIZED)
        ========================================================================== */
     :root {
-      /* Imperial Royal Sapphire & Navy Palette */
       --royal-950: #030A18;
       --royal-900: #06142E;
       --royal-850: #091D42;
@@ -25,7 +24,6 @@
       --royal-100: #E6EEFC;
       --royal-50:  #F2F6FE;
 
-      /* Authentic 24K Polished Reflective Metallic Gold Palette */
       --gold-800: #7A5208;
       --gold-700: #9E6F12;
       --gold-600: #B8860B;
@@ -34,20 +32,17 @@
       --gold-300: #FFF2B8;
       --gold-100: #FFF9E2;
 
-      /* Liquid Reflective Gold Foil Gradients */
-      --gold-foil: linear-gradient(135deg, #8A5E0B 0%, #C89B2B 18%, #FFF5C2 38%, #E6BD4A 52%, #AA7A14 72%, #F9E396 88%, #8F630D 100%);
-      --gold-foil-horiz: linear-gradient(90deg, #8F620C 0%, #D4AF37 20%, #FFF7CE 42%, #DFB338 56%, #9F7011 76%, #FCE9A6 90%, #8F620C 100%);
-      --gold-foil-text: linear-gradient(180deg, #FFFBE0 0%, #FBE28A 26%, #D4AF37 54%, #9E6F10 78%, #F7DF84 100%);
-      --gold-bevel: inset 0 1.5px 1.5px rgba(255, 252, 230, 0.88), inset 0 -1.5px 2px rgba(102, 65, 5, 0.65);
+      --gold-foil: linear-gradient(135deg, #9A6B0E 0%, #D4AF37 28%, #FFF4BE 48%, #E0B53C 66%, #9F7011 100%);
+      --gold-foil-horiz: linear-gradient(90deg, #9A6B0E 0%, #D4AF37 22%, #FFF5C4 48%, #DFB338 72%, #9A6B0E 100%);
+      --gold-foil-text: linear-gradient(180deg, #FFFBE0 0%, #FBE28A 30%, #D4AF37 64%, #F7DF84 100%);
+      --gold-bevel: inset 0 1px 1px rgba(255, 252, 230, 0.85), inset 0 -1px 1.5px rgba(102, 65, 5, 0.55);
 
-      /* Warm Ivory Pearl Paper */
       --paper: #FCFBF7;
       --paper-warm: #F6F2E8;
       --ink-900: #08152C;
       --ink-700: #22385E;
       --ink-500: #53698F;
 
-      /* Clinical Accents */
       --amber-600: #C87414;
       --blue-600: #1D6FA5;
       --purple-600: #6B328A;
@@ -57,21 +52,17 @@
       --green-600: #15803D;
       --green-100: #DCFCE7;
 
-      /* Virtual Fixed A4 Print Canvas (Exact 1 : 1.41538 Ratio) */
       --virtual-w: 520px;
       --virtual-h: 736px;
-
-      /* Dynamically Computed Rendered Dimensions & Scale */
       --render-w: 520px;
       --render-h: 736px;
       --page-scale: 1;
       --zoom: 1;
 
-      /* Imperial Velvet Studio Backdrop */
-      --studio-bg: radial-gradient(circle at 50% 32%, #102B5C 0%, #071633 44%, #030B1C 78%, #020610 100%);
+      --studio-bg: radial-gradient(circle at 50% 32%, #102B5C 0%, #071633 48%, #030B1C 84%, #020610 100%);
       --studio-grid: rgba(212, 175, 55, 0.045);
-      --glass-bg: rgba(6, 18, 42, 0.86);
-      --glass-border: rgba(212, 175, 55, 0.28);
+      --glass-bg: rgba(6, 18, 42, 0.92);
+      --glass-border: rgba(212, 175, 55, 0.3);
       --glass-text: #F8FAFC;
       --glass-muted: #A6B9D8;
       --glass-btn-hover: rgba(212, 175, 55, 0.14);
@@ -80,8 +71,8 @@
     body.theme-light {
       --studio-bg: radial-gradient(circle at 50% 30%, #FFFFFF 0%, #EDF2FA 55%, #D7E2F2 100%);
       --studio-grid: rgba(14, 43, 92, 0.045);
-      --glass-bg: rgba(255, 255, 255, 0.92);
-      --glass-border: rgba(179, 134, 34, 0.32);
+      --glass-bg: rgba(255, 255, 255, 0.95);
+      --glass-border: rgba(179, 134, 34, 0.34);
       --glass-text: #06142E;
       --glass-muted: #455B82;
       --glass-btn-hover: rgba(14, 43, 92, 0.08);
@@ -103,51 +94,20 @@
       background: var(--studio-bg);
       color: var(--glass-text);
       user-select: none;
-      transition: background 0.5s ease;
     }
 
-    /* Architectural Royal Lattice Texture */
     body::before {
       content: "";
       position: fixed;
       inset: 0;
       background-image: radial-gradient(var(--studio-grid) 1.2px, transparent 1.2px);
-      background-size: 26px 26px;
+      background-size: 28px 28px;
       pointer-events: none;
       z-index: 0;
-    }
-
-    /* Overhead Warm Gold & Royal Sapphire Spotlight */
-    body::after {
-      content: "";
-      position: fixed;
-      top: -18%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 92vw;
-      height: 76vh;
-      background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.12) 0%, rgba(31, 87, 181, 0.12) 45%, transparent 74%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Interactive 24k Gold Dust Canvas */
-    #goldDustCanvas {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-      transition: opacity 0.5s ease;
-    }
-
-    body.theme-light #goldDustCanvas {
-      opacity: 0.35;
     }
 
     /* ==========================================================================
-       2. APP SHELL (ZERO-OVERLAP FLEX COLUMN WITH 100dvh & SAFE AREAS)
+       2. APP SHELL
        ========================================================================== */
     .app-shell {
       position: relative;
@@ -163,7 +123,7 @@
     }
 
     /* ==========================================================================
-       3. TOP GLASSMORPHIC STUDIO NAVBAR & BOTTOM DOCK
+       3. TOP NAVBAR & BOTTOM DOCK
        ========================================================================== */
     .header-bar-wrap {
       flex-shrink: 0;
@@ -184,10 +144,8 @@
       gap: 10px;
       background: var(--glass-bg);
       border: 1px solid var(--glass-border);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
       border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(247, 226, 156, 0.16);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
     }
 
     .brand-chip {
@@ -211,16 +169,16 @@
       overflow: hidden;
       background: #ffffff;
       border: 1.5px solid var(--gold-500);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
       margin-left: -7px;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: transform 0.2s ease, z-index 0.2s ease;
+      transition: transform 0.16s ease;
     }
 
     .nav-mini-medallion:last-child { margin-left: 0; }
-    .nav-mini-medallion:hover { transform: scale(1.18) translateY(-1px); z-index: 5; }
+    .nav-mini-medallion:hover { transform: scale(1.15); z-index: 5; }
 
     .nav-mini-medallion img,
     .nav-mini-medallion svg {
@@ -282,13 +240,12 @@
       justify-content: center;
       gap: 5px;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
     }
 
     .ctrl-btn:hover:not(:disabled) {
       background: var(--glass-btn-hover);
       border-color: var(--glass-border);
-      transform: translateY(-1px);
     }
 
     .ctrl-btn:active:not(:disabled) { transform: scale(0.95); }
@@ -318,7 +275,6 @@
       flex-shrink: 0;
     }
 
-    /* Bottom Dock Bar */
     .dock-bar-wrap {
       flex-shrink: 0;
       width: 100%;
@@ -337,10 +293,8 @@
       gap: 7px;
       background: var(--glass-bg);
       border: 1px solid var(--glass-border);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
       border-radius: 17px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(247, 226, 156, 0.16);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
     }
 
     .page-pill {
@@ -384,7 +338,7 @@
       border-radius: 50%;
       background: linear-gradient(135deg, var(--gold-300), var(--gold-600));
       border: 2px solid #fff;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
       cursor: pointer;
     }
 
@@ -396,7 +350,6 @@
       color: var(--glass-muted);
     }
 
-    /* Desktop Side Navigation Arrows */
     .side-nav {
       position: absolute;
       top: 50%;
@@ -406,23 +359,21 @@
       border-radius: 50%;
       background: var(--glass-bg);
       border: 1px solid var(--glass-border);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
       color: var(--glass-text);
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.32);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
       z-index: 110;
-      transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: transform 0.16s ease, background-color 0.16s ease;
     }
 
     .side-nav:hover:not(:disabled) {
       background: linear-gradient(135deg, var(--gold-400), var(--gold-600));
       border-color: var(--gold-300);
       color: #06142E;
-      transform: translateY(-50%) scale(1.08);
+      transform: translateY(-50%) scale(1.07);
     }
 
     .side-nav:disabled {
@@ -434,7 +385,6 @@
     .side-nav.nav-next { left: 16px; }
     .side-nav.nav-prev { right: 16px; }
 
-    /* Toast Feedback */
     .studio-toast {
       position: fixed;
       top: 68px;
@@ -450,8 +400,8 @@
       opacity: 0;
       pointer-events: none;
       z-index: 260;
-      transition: all 0.28s ease;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.36);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.34);
       white-space: nowrap;
     }
 
@@ -475,16 +425,16 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.36);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
       z-index: 105;
       pointer-events: none;
       white-space: nowrap;
-      transition: opacity 0.45s ease, transform 0.45s ease;
+      transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .welcome-hint.hidden {
       opacity: 0;
-      transform: translateX(-50%) translateY(10px);
+      transform: translateX(-50%) translateY(8px);
     }
 
     /* ==========================================================================
@@ -493,13 +443,11 @@
     .modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(2, 6, 16, 0.68);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
+      background: rgba(2, 6, 16, 0.72);
       z-index: 180;
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.28s ease;
+      transition: opacity 0.2s ease;
     }
 
     .modal-backdrop.open { opacity: 1; pointer-events: auto; }
@@ -512,16 +460,14 @@
       width: min(350px, calc(100vw - 24px));
       background: var(--glass-bg);
       border: 1px solid var(--glass-border);
-      backdrop-filter: blur(22px);
-      -webkit-backdrop-filter: blur(22px);
       border-radius: 20px;
-      box-shadow: -14px 0 44px rgba(0, 0, 0, 0.5);
+      box-shadow: -12px 0 36px rgba(0, 0, 0, 0.45);
       z-index: 190;
       display: flex;
       flex-direction: column;
       overflow: hidden;
       transform: translateX(115%);
-      transition: transform 0.36s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     .toc-drawer.open { transform: translateX(0); }
@@ -555,7 +501,7 @@
       color: var(--glass-text);
       text-align: right;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
       font-family: inherit;
     }
 
@@ -583,7 +529,7 @@
       font-size: 13.5px;
       font-weight: 900;
       color: #fff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.28);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
       border: 1px solid rgba(255,255,255,0.2);
     }
 
@@ -591,25 +537,22 @@
     .toc-name { font-size: 12.8px; font-weight: 800; line-height: 1.25; }
     .toc-desc { font-size: 10.4px; color: var(--glass-muted); font-weight: 600; }
 
-    /* QR Share Modal */
     .qr-modal {
       position: fixed;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -46%) scale(0.92);
+      transform: translate(-50%, -46%) scale(0.94);
       width: min(380px, calc(100vw - 28px));
       background: var(--glass-bg);
       border: 1px solid var(--gold-500);
-      backdrop-filter: blur(22px);
-      -webkit-backdrop-filter: blur(22px);
       border-radius: 22px;
       padding: 20px;
       color: var(--glass-text);
-      box-shadow: 0 28px 65px rgba(0, 0, 0, 0.58);
+      box-shadow: 0 24px 54px rgba(0, 0, 0, 0.52);
       z-index: 200;
       opacity: 0;
       pointer-events: none;
-      transition: all 0.26s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: opacity 0.2s ease, transform 0.2s ease;
       text-align: center;
     }
 
@@ -627,7 +570,7 @@
       border-radius: 16px;
       padding: 10px;
       border: 2px solid var(--gold-500);
-      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.26);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -666,11 +609,10 @@
       font-weight: 900;
       cursor: pointer;
       white-space: nowrap;
-      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.38);
     }
 
     /* ==========================================================================
-       5. 3D FLIPBOOK STAGE & PROPORTIONAL VIRTUAL CANVAS ENGINE
+       5. FAST HARDWARE-ACCELERATED 3D FLIPBOOK STAGE
        ========================================================================== */
     .stage-viewport {
       flex: 1;
@@ -689,7 +631,7 @@
       align-items: center;
       justify-content: center;
       will-change: transform;
-      transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: transform 0.16s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     .pan-layer.panning {
@@ -698,11 +640,11 @@
     }
 
     .zoom-layer {
-      perspective: 2200px;
+      perspective: 2000px;
       perspective-origin: 50% 50%;
       transform: scale(var(--zoom));
       transform-origin: center center;
-      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -714,29 +656,27 @@
       width: calc(var(--render-w) * 2);
       height: var(--render-h);
       transform-style: preserve-3d;
-      transition: transform 0.68s cubic-bezier(0.25, 0.85, 0.28, 1);
+      transition: transform 0.42s cubic-bezier(0.22, 0.85, 0.32, 1);
       will-change: transform;
     }
 
-    /* Dynamic Ground Shadow */
     .book-floor-shadow {
       position: absolute;
       top: 12px;
-      bottom: -10px;
+      bottom: -8px;
       border-radius: 12px;
-      background: rgba(0, 0, 0, 0.56);
-      filter: blur(24px);
-      transform: translateZ(-24px);
-      transition: left 0.68s cubic-bezier(0.25, 0.85, 0.28, 1),
-                  width 0.68s cubic-bezier(0.25, 0.85, 0.28, 1);
+      background: rgba(0, 0, 0, 0.48);
+      filter: blur(14px);
+      transform: translateZ(-20px);
+      transition: left 0.42s cubic-bezier(0.22, 0.85, 0.32, 1),
+                  width 0.42s cubic-bezier(0.22, 0.85, 0.32, 1);
       pointer-events: none;
     }
 
     body.theme-light .book-floor-shadow {
-      background: rgba(6, 20, 46, 0.26);
+      background: rgba(6, 20, 46, 0.22);
     }
 
-    /* Gilded Gold-Leaf Page Stack Edges */
     .paper-stack-edge {
       position: absolute;
       top: 3px;
@@ -750,7 +690,7 @@
       border-top: 1px solid rgba(212, 175, 55, 0.45);
       border-bottom: 1px solid rgba(212, 175, 55, 0.45);
       transform: translateZ(-4px);
-      transition: all 0.5s ease;
+      transition: opacity 0.3s ease, width 0.3s ease;
       pointer-events: none;
       opacity: 0;
     }
@@ -758,16 +698,13 @@
     .paper-stack-edge.left-stack {
       border-left: 1px solid rgba(179, 134, 34, 0.55);
       border-radius: 4px 0 0 4px;
-      box-shadow: -3px 3px 12px rgba(0, 0, 0, 0.32);
     }
 
     .paper-stack-edge.right-stack {
       border-right: 1px solid rgba(179, 134, 34, 0.55);
       border-radius: 0 4px 4px 0;
-      box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.32);
     }
 
-    /* Hanging Royal Crimson & Gold Silk Bookmark Ribbon */
     .royal-bookmark {
       position: absolute;
       bottom: -24px;
@@ -777,23 +714,16 @@
       margin-left: -7px;
       background: linear-gradient(180deg, #7F1D1D 0%, #B91C1C 68%, #D4AF37 100%);
       clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.42);
-      transform: translateZ(2px) rotate(-3deg);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+      transform: translateZ(2px) rotate(-2deg);
       transform-origin: top center;
       pointer-events: none;
       opacity: 0;
-      transition: opacity 0.45s ease;
-      animation: ribbonSway 4.5s ease-in-out infinite alternate;
+      transition: opacity 0.3s ease;
     }
 
     .book-3d.is-open .royal-bookmark { opacity: 1; }
 
-    @keyframes ribbonSway {
-      0%   { transform: translateZ(2px) rotate(-3.5deg); }
-      100% { transform: translateZ(2px) rotate(3.5deg); }
-    }
-
-    /* Center Spine Crease */
     .book-spine-line {
       position: absolute;
       top: 0;
@@ -805,13 +735,13 @@
       transform: translateZ(3px);
       pointer-events: none;
       opacity: 0;
-      transition: opacity 0.4s ease;
+      transition: opacity 0.3s ease;
     }
 
     .book-3d.is-open .book-spine-line { opacity: 1; }
 
     /* ==========================================================================
-       6. 3D LEAVES, PAGE FACES & FIXED VIRTUAL 520×736 SCALER
+       6. 3D LEAVES, PAGE FACES & VIRTUAL 520×736 SCALER
        ========================================================================== */
     .leaf {
       position: absolute;
@@ -822,7 +752,7 @@
       transform-origin: right center;
       transform-style: preserve-3d;
       transform: rotateY(0deg);
-      transition: transform 0.82s cubic-bezier(0.32, 0.72, 0.18, 1);
+      transition: transform 0.48s cubic-bezier(0.25, 0.8, 0.25, 1);
       will-change: transform;
       cursor: pointer;
     }
@@ -845,7 +775,7 @@
       overflow: hidden;
       box-shadow: inset 0 0 0 1px rgba(212, 175, 55, 0.26);
       transform-style: flat;
-      transition: opacity 0.35s ease;
+      transition: opacity 0.24s ease;
     }
 
     .page-face.front {
@@ -858,7 +788,6 @@
       border-radius: 2px 10px 10px 2px;
     }
 
-    /* Front Cover (Leaf 0 Front) & Independent Back Cover (Leaf 4 Back) */
     .leaf[data-leaf="0"] .page-face.front {
       border-radius: 12px 3px 3px 12px;
       background: radial-gradient(circle at 22% 14%, #153D82 0%, #091D42 52%, #040D21 100%);
@@ -880,16 +809,11 @@
       direction: rtl;
       overflow: hidden;
       background-color: transparent;
-      will-change: transform;
+      contain: layout style paint;
     }
 
-    /* Warm Ivory Pearl Paper with Delicate Royal Gold Filigree Frame on Interior Pages */
     .page-face:not(.cover-face) .page-scaler {
       background: linear-gradient(180deg, #FCFBF7 0%, #F7F3E9 100%);
-      background-image:
-        radial-gradient(rgba(14, 43, 92, 0.025) 1px, transparent 1px),
-        linear-gradient(180deg, #FCFBF7 0%, #F7F3E9 100%);
-      background-size: 16px 16px, 100% 100%;
     }
 
     .page-face:not(.cover-face) .page-scaler::before {
@@ -902,18 +826,17 @@
       z-index: 25;
     }
 
-    /* Inner Spine Depth Shading */
     .page-face.front::after {
       content: "";
       position: absolute;
       top: 0;
       bottom: 0;
       right: 0;
-      width: 26px;
+      width: 24px;
       background: linear-gradient(to left,
-        rgba(4, 13, 33, 0.25) 0%,
-        rgba(4, 13, 33, 0.08) 30%,
-        rgba(255, 255, 255, 0.08) 60%,
+        rgba(4, 13, 33, 0.24) 0%,
+        rgba(4, 13, 33, 0.08) 32%,
+        rgba(255, 255, 255, 0.06) 62%,
         transparent 100%);
       pointer-events: none;
       z-index: 30;
@@ -925,11 +848,11 @@
       top: 0;
       bottom: 0;
       left: 0;
-      width: 26px;
+      width: 24px;
       background: linear-gradient(to right,
-        rgba(4, 13, 33, 0.25) 0%,
-        rgba(4, 13, 33, 0.08) 30%,
-        rgba(255, 255, 255, 0.08) 60%,
+        rgba(4, 13, 33, 0.24) 0%,
+        rgba(4, 13, 33, 0.08) 32%,
+        rgba(255, 255, 255, 0.06) 62%,
         transparent 100%);
       pointer-events: none;
       z-index: 30;
@@ -937,77 +860,73 @@
 
     .leaf[data-leaf="0"] .page-face.front::after {
       width: 16px;
-      background: linear-gradient(to left, rgba(0,0,0,0.38) 0%, rgba(255,255,255,0.08) 40%, transparent 100%);
+      background: linear-gradient(to left, rgba(0,0,0,0.36) 0%, rgba(255,255,255,0.06) 40%, transparent 100%);
     }
 
     .leaf[data-leaf="4"] .page-face.back::after {
       width: 16px;
-      background: linear-gradient(to right, rgba(0,0,0,0.38) 0%, rgba(255,255,255,0.08) 40%, transparent 100%);
+      background: linear-gradient(to right, rgba(0,0,0,0.36) 0%, rgba(255,255,255,0.06) 40%, transparent 100%);
     }
 
-    /* Dynamic Moving Specular Highlight & Turn Shadow */
     .turn-shade {
       position: absolute;
       inset: 0;
       pointer-events: none;
       z-index: 35;
       opacity: 0;
-      transition: opacity 0.22s ease;
+      transition: opacity 0.16s ease;
     }
 
     .page-face.front .turn-shade {
       background: linear-gradient(to right,
-        rgba(255,255,255,0.28) 0%,
-        rgba(255,255,255,0.05) 35%,
-        rgba(0,0,0,0.04) 55%,
-        rgba(0,0,0,0.3) 100%);
+        rgba(255,255,255,0.24) 0%,
+        rgba(255,255,255,0.04) 36%,
+        rgba(0,0,0,0.04) 56%,
+        rgba(0,0,0,0.28) 100%);
     }
 
     .page-face.back .turn-shade {
       background: linear-gradient(to left,
-        rgba(255,255,255,0.28) 0%,
-        rgba(255,255,255,0.05) 35%,
-        rgba(0,0,0,0.04) 55%,
-        rgba(0,0,0,0.3) 100%);
+        rgba(255,255,255,0.24) 0%,
+        rgba(255,255,255,0.04) 36%,
+        rgba(0,0,0,0.04) 56%,
+        rgba(0,0,0,0.28) 100%);
     }
 
     .leaf.turning .turn-shade,
     .leaf.dragging .turn-shade {
-      opacity: var(--shade-opacity, 0.56);
+      opacity: var(--shade-opacity, 0.52);
     }
 
-    /* Hover Corner Curl Cue */
     .corner-curl {
       position: absolute;
       bottom: 0;
-      width: 38px;
-      height: 38px;
+      width: 36px;
+      height: 36px;
       z-index: 40;
       pointer-events: none;
       opacity: 0;
-      transition: all 0.26s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: opacity 0.18s ease, transform 0.18s ease;
     }
 
     .page-face.front .corner-curl {
       left: 0;
-      background: linear-gradient(45deg, rgba(6, 20, 46, 0.28) 0%, rgba(255,255,255,0.96) 48%, rgba(212, 175, 55, 0.22) 52%, transparent 54%);
+      background: linear-gradient(45deg, rgba(6, 20, 46, 0.25) 0%, rgba(255,255,255,0.95) 48%, rgba(212, 175, 55, 0.22) 52%, transparent 54%);
       border-top-right-radius: 10px;
-      box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.18);
       transform-origin: bottom left;
-      transform: scale(0.45);
+      transform: scale(0.5);
     }
 
     .page-face.back .corner-curl {
       right: 0;
-      background: linear-gradient(-45deg, rgba(6, 20, 46, 0.28) 0%, rgba(255,255,255,0.96) 48%, rgba(212, 175, 55, 0.22) 52%, transparent 54%);
+      background: linear-gradient(-45deg, rgba(6, 20, 46, 0.25) 0%, rgba(255,255,255,0.95) 48%, rgba(212, 175, 55, 0.22) 52%, transparent 54%);
       border-top-left-radius: 10px;
-      box-shadow: -3px -3px 10px rgba(0, 0, 0, 0.18);
       transform-origin: bottom right;
-      transform: scale(0.45);
+      transform: scale(0.5);
     }
 
     .page-face:hover .corner-curl {
-      opacity: 0.94;
+      opacity: 0.92;
       transform: scale(1);
     }
 
@@ -1017,7 +936,7 @@
     }
 
     /* ==========================================================================
-       7. SHARED INTERIOR EDITORIAL LAYOUT (INSIDE 520 × 736 CANVAS)
+       7. SHARED INTERIOR EDITORIAL LAYOUT
        ========================================================================== */
     .page-content {
       width: 520px;
@@ -1037,19 +956,17 @@
       justify-content: space-between;
     }
 
-    /* Subtle Royal Watermark Emblem inside pages */
     .page-watermark {
       position: absolute;
       bottom: 28px;
       left: 18px;
-      width: 140px;
-      height: 140px;
-      opacity: 0.045;
+      width: 130px;
+      height: 130px;
+      opacity: 0.04;
       pointer-events: none;
       z-index: 1;
     }
 
-    /* Running Editorial Footer on Interior Pages (2–9) */
     .page-footer {
       position: absolute;
       bottom: 10px;
@@ -1076,19 +993,11 @@
       padding: 0 7px;
       border-radius: 6px;
       background: var(--gold-foil);
-      background-size: 200% 200%;
       border: 1px solid #FFF4C2;
       color: #051126;
       font-weight: 900;
       font-size: 11px;
-      box-shadow: 0 2px 9px rgba(184, 134, 11, 0.48), var(--gold-bevel);
-      text-shadow: 0 1px 0 rgba(255, 250, 220, 0.7);
-      animation: goldFoilGleam 5s ease-in-out infinite;
-    }
-
-    @keyframes goldFoilGleam {
-      0%, 100% { background-position: 0% 50%; }
-      50%      { background-position: 100% 50%; }
+      box-shadow: 0 2px 6px rgba(184, 134, 11, 0.4), var(--gold-bevel);
     }
 
     .sec-head {
@@ -1104,7 +1013,6 @@
       height: 33px;
       border-radius: 50%;
       background: var(--gold-foil);
-      background-size: 200% 200%;
       border: 1.5px solid #FFF5C8;
       color: #051126;
       font-size: 16.5px;
@@ -1113,25 +1021,20 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      box-shadow: 0 4px 15px rgba(184, 134, 11, 0.52), 0 0 0 1px rgba(138, 94, 11, 0.35), var(--gold-bevel);
-      text-shadow: 0 1px 0 rgba(255, 250, 222, 0.75);
-      animation: goldFoilGleam 5s ease-in-out infinite;
+      box-shadow: 0 3px 10px rgba(184, 134, 11, 0.42), var(--gold-bevel);
     }
 
     .sec-badge.royal {
       background: linear-gradient(145deg, #133572 0%, #06142E 100%);
       border: 2px solid #D4AF37;
       color: #FFF2B8;
-      box-shadow: 0 4px 14px rgba(184, 134, 11, 0.42), inset 0 0 8px rgba(255, 242, 184, 0.25), 0 0 0 1px rgba(255, 245, 200, 0.4);
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 10px rgba(240, 203, 99, 0.65);
+      box-shadow: 0 3px 10px rgba(184, 134, 11, 0.36);
     }
 
     .sec-title {
       font-size: 19.5px;
       font-weight: 900;
-      background: linear-gradient(135deg, var(--royal-900) 0%, var(--royal-700) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--royal-900);
       line-height: 1.15;
       letter-spacing: -0.2px;
     }
@@ -1140,7 +1043,7 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      font-size: 12.6px;
+      font-size: 12.4px;
       font-weight: 900;
       color: var(--royal-900);
       margin: 7px 0 5px;
@@ -1157,20 +1060,18 @@
     }
 
     /* ==========================================================================
-       8. PAGE 1 & PAGE 10 — ROYAL COVERS & ROTATING GOLD RIBBON BORDER
+       8. PAGE 1 & PAGE 10 — LIGHTWEIGHT ROYAL COVERS (NO SPINNING MANDALA)
        ========================================================================== */
     .cover-pattern {
       position: absolute;
       inset: 0;
-      opacity: 0.14;
+      opacity: 0.13;
       background-image:
-        radial-gradient(circle at 86% 10%, rgba(212, 175, 55, 0.55) 0, transparent 38%),
-        radial-gradient(circle at 12% 88%, rgba(59, 130, 246, 0.42) 0, transparent 44%),
-        repeating-linear-gradient(45deg, rgba(212,175,55,0.22) 0, rgba(212,175,55,0.22) 1px, transparent 1px, transparent 22px);
+        radial-gradient(circle at 86% 10%, rgba(212, 175, 55, 0.45) 0, transparent 40%),
+        radial-gradient(circle at 12% 88%, rgba(59, 130, 246, 0.38) 0, transparent 44%);
       pointer-events: none;
     }
 
-    /* Royal Double Gold Frame + Corner Filigree */
     .royal-cover-frame {
       position: absolute;
       inset: 9px;
@@ -1178,7 +1079,7 @@
       border-radius: 10px;
       pointer-events: none;
       z-index: 4;
-      box-shadow: inset 0 0 0 3px rgba(6, 20, 46, 0.65), inset 0 0 0 4px rgba(247, 226, 156, 0.25);
+      box-shadow: inset 0 0 0 3px rgba(6, 20, 46, 0.65), inset 0 0 0 4px rgba(247, 226, 156, 0.24);
     }
 
     .royal-corner {
@@ -1193,26 +1094,6 @@
     .royal-corner.tr { top: 11px; right: 11px; transform: scaleX(-1); }
     .royal-corner.bl { bottom: 11px; left: 11px; transform: scaleY(-1); }
     .royal-corner.br { bottom: 11px; right: 11px; transform: scale(-1); }
-
-    /* Subtle Rotating Arabesque Mandala behind Cover */
-    .cover-mandala {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 440px;
-      height: 440px;
-      margin-top: -220px;
-      margin-left: -220px;
-      opacity: 0.065;
-      pointer-events: none;
-      z-index: 1;
-      animation: mandalaSpin 90s linear infinite;
-    }
-
-    @keyframes mandalaSpin {
-      from { transform: rotate(0deg); }
-      to   { transform: rotate(360deg); }
-    }
 
     .cover-emblems {
       display: flex;
@@ -1231,15 +1112,15 @@
       overflow: hidden;
       background: #ffffff;
       border: 2px solid var(--gold-400);
-      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.42), 0 0 0 3px rgba(212, 175, 55, 0.22);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.38), 0 0 0 3px rgba(212, 175, 55, 0.22);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      transition: transform 0.25s ease;
+      transition: transform 0.18s ease;
     }
 
-    .logo-medallion:hover { transform: translateY(-2px) scale(1.06); }
+    .logo-medallion:hover { transform: scale(1.06); }
 
     .logo-medallion img,
     .logo-medallion svg {
@@ -1263,7 +1144,6 @@
     .cover-banner {
       width: 100%;
       background: var(--gold-foil-horiz);
-      background-size: 220% auto;
       color: #051126;
       text-align: center;
       font-size: 13.2px;
@@ -1271,14 +1151,7 @@
       padding: 4px 12px;
       border-radius: 999px;
       border: 1px solid #FFF6CC;
-      box-shadow: 0 5px 18px rgba(184, 134, 11, 0.45), var(--gold-bevel);
-      text-shadow: 0 1px 0 rgba(255, 250, 224, 0.65);
-      animation: goldBannerFlow 5.5s linear infinite;
-    }
-
-    @keyframes goldBannerFlow {
-      0%   { background-position: 0% center; }
-      100% { background-position: 220% center; }
+      box-shadow: 0 4px 14px rgba(184, 134, 11, 0.4), var(--gold-bevel);
     }
 
     .cover-course {
@@ -1300,16 +1173,13 @@
       line-height: 1.12;
       letter-spacing: -0.3px;
       color: #FFFFFF;
-      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.42);
     }
 
     .cover-hero .accent {
-      background: linear-gradient(120deg, #B8860B 0%, #F7DF84 26%, #FFFBE0 46%, #D4AF37 64%, #FFF2B8 84%, #B8860B 100%);
-      background-size: 220% auto;
+      background: var(--gold-foil-text);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.55));
-      animation: goldBannerFlow 4.8s linear infinite;
     }
 
     .cover-tagline {
@@ -1328,7 +1198,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 10px;
-      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.36);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.32);
       color: var(--ink-900);
       position: relative;
       z-index: 6;
@@ -1342,14 +1212,8 @@
       padding: 0 4px;
     }
 
-    .tool-svg {
-      transition: transform 0.25s ease, filter 0.25s ease;
-    }
-
-    .tool-svg:hover {
-      transform: translateY(-3px) scale(1.06);
-      filter: drop-shadow(0 5px 10px rgba(212, 175, 55, 0.55));
-    }
+    .tool-svg { transition: transform 0.18s ease; }
+    .tool-svg:hover { transform: translateY(-2px) scale(1.05); }
 
     .cover-qr-btn {
       border: none;
@@ -1365,62 +1229,22 @@
       cursor: pointer;
       font-family: inherit;
       border-radius: 9px 0 0 9px;
-      transition: background 0.2s ease, transform 0.2s ease;
+      transition: background-color 0.15s ease;
     }
 
-    .cover-qr-btn:hover { background: #FBF6E8; transform: scale(1.03); }
+    .cover-qr-btn:hover { background: #FBF6E8; }
     .cover-qr-title { font-size: 10px; font-weight: 900; color: var(--royal-900); margin-top: 2px; }
     .cover-qr-sub { font-size: 8px; font-weight: 600; color: var(--ink-500); line-height: 1.25; }
 
-    /* ==========================================================================
-       ROYAL GOLD-GLASS CARDS WITH PURE PERIMETER ROTATING GOLD RIBBON
-       (ONLY the 2px border ribbon rotates — ZERO spinning inside the center!)
-       ========================================================================== */
-    @property --gold-ribbon-angle {
-      syntax: '<angle>';
-      initial-value: 0deg;
-      inherits: false;
-    }
-
-    @keyframes spinGoldRibbon {
-      to { --gold-ribbon-angle: 360deg; }
-    }
-
+    /* Clean Static Royal Gold-Bordered Glass Box (Zero GPU lag) */
     .cover-glass-box {
       position: relative;
-      background: linear-gradient(145deg, rgba(212, 175, 55, 0.14) 0%, rgba(12, 33, 74, 0.72) 55%, rgba(212, 175, 55, 0.1) 100%);
-      border: 1px solid rgba(212, 175, 55, 0.35);
+      background: linear-gradient(145deg, rgba(212, 175, 55, 0.12) 0%, rgba(10, 29, 66, 0.88) 55%, rgba(212, 175, 55, 0.1) 100%);
+      border: 1.5px solid rgba(212, 175, 55, 0.58);
       border-radius: 14px;
       padding: 6.5px 12px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(247, 226, 156, 0.22);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.26), inset 0 1px 0 rgba(247, 226, 156, 0.25);
       z-index: 6;
-    }
-
-    /* Masked 2px perimeter ring ONLY — middle stays completely clean & static */
-    .cover-glass-box::before {
-      content: "";
-      position: absolute;
-      inset: -1.5px;
-      border-radius: 15px;
-      padding: 2px;
-      background: conic-gradient(
-        from var(--gold-ribbon-angle, 0deg),
-        rgba(212, 175, 55, 0.18) 0deg,
-        #FFF3C4 45deg,
-        #D4AF37 85deg,
-        rgba(212, 175, 55, 0.15) 140deg,
-        rgba(212, 175, 55, 0.18) 200deg,
-        #F7E29C 245deg,
-        #B38622 290deg,
-        rgba(212, 175, 55, 0.18) 360deg
-      );
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      mask-composite: exclude;
-      pointer-events: none;
-      animation: spinGoldRibbon 5.5s linear infinite;
     }
 
     .cover-box-title {
@@ -1488,7 +1312,6 @@
 
     .cover-pill-btn {
       background: var(--gold-foil);
-      background-size: 200% 200%;
       color: #051126;
       border: 1px solid #FFF5C8;
       border-radius: 999px;
@@ -1497,16 +1320,11 @@
       font-size: 11px;
       font-weight: 900;
       cursor: pointer;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35), var(--gold-bevel);
-      text-shadow: 0 1px 0 rgba(255, 250, 224, 0.65);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      animation: goldFoilGleam 5.5s ease-in-out infinite;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3), var(--gold-bevel);
+      transition: transform 0.15s ease;
     }
 
-    .cover-pill-btn:hover {
-      transform: translateY(-2px) scale(1.04);
-      box-shadow: 0 7px 20px rgba(212, 175, 55, 0.58), var(--gold-bevel);
-    }
+    .cover-pill-btn:hover { transform: translateY(-2px); }
 
     .cover-disclaimer {
       text-align: center;
@@ -1529,7 +1347,6 @@
       align-items: center;
       gap: 10px;
       margin-bottom: 5px;
-      box-shadow: 0 4px 12px rgba(6, 20, 46, 0.05);
     }
 
     .def-card p { font-size: 10.6px; line-height: 1.48; font-weight: 700; color: var(--ink-900); }
@@ -1547,7 +1364,6 @@
       border-top: 2.5px solid var(--gold-500);
       border-radius: 11px;
       padding: 6.5px 8.5px;
-      box-shadow: 0 2px 8px rgba(6, 20, 46, 0.05);
     }
 
     .who-card strong { display: block; font-size: 10.9px; font-weight: 900; color: var(--royal-900); margin-bottom: 2px; }
@@ -1570,15 +1386,14 @@
       gap: 9px;
       align-items: center;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
     }
 
     .myth-card:hover,
     .myth-card.highlighted {
       border-color: var(--gold-500);
       background: #FFFDF6;
-      transform: translateX(-3px);
-      box-shadow: 0 5px 14px rgba(212, 175, 55, 0.22);
+      transform: translateX(-2px);
     }
 
     .myth-side {
@@ -1634,16 +1449,12 @@
       border-radius: 12px;
       padding: 8px 7px;
       text-align: center;
-      box-shadow: 0 5px 16px rgba(6, 20, 46, 0.28), inset 0 1px 0 rgba(255, 245, 200, 0.38);
     }
 
     .target-metric .val {
       font-size: 19.5px;
       font-weight: 900;
-      background: var(--gold-foil-text);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.5));
+      color: var(--gold-300);
       line-height: 1.1;
       direction: ltr;
       display: block;
@@ -1665,11 +1476,8 @@
       display: flex;
       overflow: hidden;
       margin-bottom: 8px;
-      box-shadow: 0 4px 14px rgba(6, 20, 46, 0.06);
-      transition: transform 0.2s ease;
+      box-shadow: 0 3px 10px rgba(6, 20, 46, 0.05);
     }
-
-    .type-card:hover { transform: translateY(-2px); }
 
     .type-strip {
       width: 26px;
@@ -1716,12 +1524,6 @@
       width: var(--t-width, 25%);
       border-radius: 99px;
       background: linear-gradient(270deg, var(--c-accent), var(--c-accent-light, var(--c-accent)));
-      animation: barPulse 3.4s ease-in-out infinite;
-    }
-
-    @keyframes barPulse {
-      0%, 100% { filter: brightness(1); }
-      50%      { filter: brightness(1.16); }
     }
 
     .timeline-scale { display: flex; justify-content: space-between; font-size: 8.5px; font-weight: 700; color: var(--ink-500); }
@@ -1739,7 +1541,6 @@
       font-weight: 800;
     }
 
-    /* Royal Interactive Long-Acting & Ultra-Long Basal Card (Page 4) */
     .basal-royal-card {
       background: linear-gradient(155deg, #06142E 0%, #0C2552 60%, #081A3B 100%);
       border: 1.5px solid var(--gold-500);
@@ -1747,7 +1548,6 @@
       padding: 9px 11px;
       color: #fff;
       margin-bottom: 8px;
-      box-shadow: 0 8px 22px rgba(6, 20, 46, 0.22);
     }
 
     .basal-head {
@@ -1769,7 +1569,6 @@
       height: 25px;
       border-radius: 50%;
       background: var(--gold-foil);
-      background-size: 200% 200%;
       border: 1px solid #FFF5C8;
       color: #051126;
       font-size: 12.5px;
@@ -1778,20 +1577,12 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      box-shadow: 0 2px 11px rgba(212, 175, 55, 0.55), var(--gold-bevel);
-      text-shadow: 0 1px 0 rgba(255, 250, 224, 0.7);
-      animation: goldFoilGleam 5s ease-in-out infinite;
     }
 
-    .basal-title {
-      font-size: 13px;
-      font-weight: 900;
-      color: var(--gold-300);
-    }
+    .basal-title { font-size: 13px; font-weight: 900; color: var(--gold-300); }
 
     .basal-peakless-badge {
       background: var(--gold-foil-horiz);
-      background-size: 200% auto;
       border: 1px solid #FFF5C8;
       color: #06142E;
       font-size: 9px;
@@ -1799,7 +1590,6 @@
       padding: 2px 8px;
       border-radius: 99px;
       white-space: nowrap;
-      box-shadow: 0 2px 8px rgba(212, 175, 55, 0.35), var(--gold-bevel);
     }
 
     .basal-curve-stage {
@@ -1819,11 +1609,11 @@
     }
 
     #basalCurvePath, #basalCurveArea {
-      transition: d 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: d 0.35s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     #basalPulseDot {
-      transition: cx 0.55s cubic-bezier(0.22, 1, 0.36, 1), cy 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: cx 0.35s cubic-bezier(0.22, 1, 0.36, 1), cy 0.35s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     .basal-tabs {
@@ -1837,12 +1627,12 @@
       background: rgba(255, 255, 255, 0.07);
       border: 1px solid rgba(212, 175, 55, 0.3);
       border-radius: 9px;
-      padding: 4px 4px;
+      padding: 4px;
       color: #fff;
       font-family: inherit;
       cursor: pointer;
       text-align: center;
-      transition: all 0.2s ease;
+      transition: background-color 0.15s ease, border-color 0.15s ease;
     }
 
     .basal-tab:hover {
@@ -1852,12 +1642,8 @@
 
     .basal-tab.active {
       background: var(--gold-foil);
-      background-size: 200% 200%;
       border-color: #FFF7CE;
       color: #06142E;
-      box-shadow: 0 3px 12px rgba(212, 175, 55, 0.48), var(--gold-bevel);
-      text-shadow: 0 1px 0 rgba(255, 250, 224, 0.6);
-      animation: goldFoilGleam 5s ease-in-out infinite;
     }
 
     .basal-tab strong { display: block; font-size: 10.2px; font-weight: 900; line-height: 1.15; }
@@ -1880,11 +1666,7 @@
       margin-bottom: 2px;
     }
 
-    .basal-detail-top strong {
-      font-size: 10.2px;
-      font-weight: 900;
-      color: #fff;
-    }
+    .basal-detail-top strong { font-size: 10.2px; font-weight: 900; color: #fff; }
 
     .basal-dur-chip {
       background: rgba(212, 175, 55, 0.22);
@@ -2022,7 +1804,7 @@
       stroke: #B38622;
       stroke-width: 1.5;
       cursor: pointer;
-      transition: all 0.22s ease;
+      transition: fill 0.15s ease, stroke 0.15s ease;
     }
 
     .body-zone:hover,
@@ -2030,7 +1812,6 @@
       fill: rgba(212, 175, 55, 0.92);
       stroke: #06142E;
       stroke-width: 2.1;
-      filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.85));
     }
 
     .site-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 5.5px; position: relative; z-index: 2; }
@@ -2041,7 +1822,7 @@
       border-radius: 10px;
       padding: 6.5px 7.5px;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: border-color 0.15s ease, background-color 0.15s ease;
       text-align: right;
       font-family: inherit;
     }
@@ -2050,12 +1831,10 @@
     .site-card.active {
       border-color: var(--gold-500);
       background: var(--gold-100);
-      transform: translateY(-1px);
-      box-shadow: 0 3px 10px rgba(212, 175, 55, 0.24);
     }
 
     .site-card strong { display: flex; align-items: center; justify-content: space-between; font-size: 11px; font-weight: 900; color: var(--royal-900); margin-bottom: 2px; }
-    .site-card .rank-chip { font-size: 8.5px; font-weight: 900; color: #051126; background: var(--gold-foil); border: 1px solid #E6BD4A; padding: 1px 6px; border-radius: 99px; box-shadow: 0 1px 5px rgba(184, 134, 11, 0.38), var(--gold-bevel); }
+    .site-card .rank-chip { font-size: 8.5px; font-weight: 900; color: #051126; background: var(--gold-foil); border: 1px solid #E6BD4A; padding: 1px 6px; border-radius: 99px; }
     .site-card span { display: block; font-size: 9.3px; line-height: 1.35; font-weight: 600; color: var(--ink-700); }
 
     .zone-live-banner {
@@ -2087,7 +1866,7 @@
     .info-box-clean li::before { content: "•"; position: absolute; right: 0; top: 0; color: var(--royal-700); font-weight: 900; }
 
     /* ==========================================================================
-       13. PAGE 7 — INJECTION STEPS, CIRCULAR GOLD 10s TIMER & STORAGE
+       13. PAGE 7 — INJECTION STEPS, 10s TIMER & STORAGE
        ========================================================================== */
     .steps-layout {
       display: grid;
@@ -2105,7 +1884,6 @@
       height: 22px;
       border-radius: 50%;
       background: var(--gold-foil);
-      background-size: 200% 200%;
       border: 1px solid #FFF5C8;
       color: #051126;
       font-size: 10.8px;
@@ -2115,9 +1893,6 @@
       justify-content: center;
       flex-shrink: 0;
       margin-top: 1px;
-      box-shadow: 0 2px 8px rgba(184, 134, 11, 0.48), var(--gold-bevel);
-      text-shadow: 0 1px 0 rgba(255, 250, 224, 0.7);
-      animation: goldFoilGleam 5s ease-in-out infinite;
     }
 
     .pen-diagram-card {
@@ -2140,7 +1915,6 @@
       border-radius: 11px;
       padding: 6.5px 6px;
       background: var(--gold-foil);
-      background-size: 200% 200%;
       color: #06142E;
       font-family: inherit;
       font-size: 9.5px;
@@ -2150,13 +1924,8 @@
       flex-direction: column;
       align-items: center;
       gap: 3px;
-      box-shadow: 0 4px 14px rgba(184, 134, 11, 0.42), var(--gold-bevel);
-      text-shadow: 0 1px 0 rgba(255, 250, 224, 0.65);
-      transition: transform 0.18s ease;
-      animation: goldFoilGleam 5.5s ease-in-out infinite;
+      box-shadow: 0 3px 10px rgba(184, 134, 11, 0.35), var(--gold-bevel);
     }
-
-    .timer-btn:hover { transform: scale(1.03); }
 
     .timer-btn.running {
       background: linear-gradient(135deg, var(--royal-800), var(--royal-950));
@@ -2174,10 +1943,7 @@
     }
 
     .timer-btn.running .timer-ring-wrap { display: flex; }
-
-    .timer-ring-svg {
-      transform: rotate(-90deg);
-    }
+    .timer-ring-svg { transform: rotate(-90deg); }
 
     .timer-ring-progress {
       stroke-dasharray: 113.1;
@@ -2189,10 +1955,7 @@
       position: absolute;
       font-size: 17.5px;
       font-weight: 900;
-      background: var(--gold-foil-text);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 0 8px rgba(240, 203, 99, 0.72));
+      color: var(--gold-300);
       line-height: 1;
     }
 
@@ -2219,7 +1982,7 @@
     .storage-card p { font-size: 9.3px; line-height: 1.4; font-weight: 600; color: var(--ink-700); }
 
     /* ==========================================================================
-       14. PAGE 8 — EMERGENCY & INTERACTIVE "بياناتي" CARD (INTERIOR PAGE)
+       14. PAGE 8 — EMERGENCY & INTERACTIVE "بياناتي" CARD
        ========================================================================== */
     .hypo-mild {
       background: #FFF9EB;
@@ -2253,7 +2016,6 @@
       border-radius: 99px;
       margin-left: 4px;
       font-size: 9.2px;
-      box-shadow: var(--gold-bevel);
     }
 
     .hypo-severe {
@@ -2289,7 +2051,6 @@
       border: 1.5px solid rgba(212, 175, 55, 0.65);
       border-radius: 12px;
       padding: 7px 9px;
-      box-shadow: 0 4px 12px rgba(6, 20, 46, 0.08);
       margin-bottom: 7px;
     }
 
@@ -2302,7 +2063,6 @@
     }
 
     .my-data-head h4 { font-size: 11.6px; font-weight: 900; color: var(--royal-900); }
-
     .data-actions { display: flex; align-items: center; gap: 5px; }
 
     .data-mini-btn {
@@ -2315,12 +2075,10 @@
       font-size: 9.2px;
       font-weight: 800;
       cursor: pointer;
-      transition: all 0.18s ease;
     }
 
     .data-mini-btn.save { background: var(--royal-850); border-color: var(--gold-500); color: var(--gold-300); }
     .data-mini-btn.clear { background: var(--crimson-50); border-color: #F2BCC3; color: var(--crimson-600); }
-    .data-mini-btn:hover { transform: scale(1.04); }
 
     .save-status {
       font-size: 8.8px;
@@ -2330,7 +2088,7 @@
       padding: 1.5px 7px;
       border-radius: 99px;
       opacity: 0;
-      transition: opacity 0.25s ease;
+      transition: opacity 0.2s ease;
     }
 
     .save-status.visible { opacity: 1; }
@@ -2357,11 +2115,9 @@
     .data-field input:focus {
       border-color: var(--gold-500);
       background: #fff;
-      box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.22);
     }
 
     .doses-triple { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
-
     .emergency-bar { display: grid; grid-template-columns: 1fr 1.35fr; gap: 7px; }
 
     .emg-call-btn {
@@ -2373,33 +2129,30 @@
       text-decoration: none;
       color: #fff;
       font-weight: 900;
-      transition: transform 0.2s ease;
     }
 
-    .emg-call-btn:hover { transform: translateY(-2px); }
-    .emg-call-btn.ambulance { background: linear-gradient(135deg, #D93848, #991B1B); box-shadow: 0 4px 12px rgba(185, 28, 28, 0.3); }
-    .emg-call-btn.moh { background: linear-gradient(135deg, var(--royal-800), var(--royal-950)); border: 1px solid rgba(212, 175, 55, 0.45); box-shadow: 0 4px 12px rgba(6, 20, 46, 0.28); }
+    .emg-call-btn.ambulance { background: linear-gradient(135deg, #D93848, #991B1B); }
+    .emg-call-btn.moh { background: linear-gradient(135deg, var(--royal-800), var(--royal-950)); border: 1px solid rgba(212, 175, 55, 0.45); }
     .emg-call-btn small { font-size: 9.4px; font-weight: 700; opacity: 0.94; }
-    .emg-call-btn strong { font-size: 18.5px; letter-spacing: 0.5px; line-height: 1; background: var(--gold-foil-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 1px 6px rgba(212, 175, 55, 0.55)); }
-    .emg-call-btn.ambulance strong { background: none; -webkit-text-fill-color: #fff; color: #fff; filter: none; }
+    .emg-call-btn strong { font-size: 18.5px; letter-spacing: 0.5px; line-height: 1; color: var(--gold-300); }
+    .emg-call-btn.ambulance strong { color: #fff; }
 
     /* ==========================================================================
-       15. PAGE 9 — DAILY LIFE WITH INSULIN & INTERACTIVE TRAVEL KIT
+       15. PAGE 9 — UPGRADED DAILY LIFE, CHECKUPS, DOCTOR PREP & TRAVEL KIT
        ========================================================================== */
     .life-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 8px;
-      margin-bottom: 9px;
+      gap: 6px 7px;
+      margin-bottom: 7px;
     }
 
     .life-card {
       background: #fff;
       border: 1px solid #D6E1F3;
-      border-top: 3px solid var(--royal-700);
-      border-radius: 12px;
-      padding: 8px 10px;
-      box-shadow: 0 3px 10px rgba(6, 20, 46, 0.05);
+      border-top: 2.5px solid var(--royal-700);
+      border-radius: 11px;
+      padding: 6px 8.5px;
     }
 
     .life-card.gold-top { border-top-color: var(--gold-500); }
@@ -2407,14 +2160,14 @@
     .life-card-head {
       display: flex;
       align-items: center;
-      gap: 6px;
-      margin-bottom: 3px;
+      gap: 5.5px;
+      margin-bottom: 2px;
     }
 
     .life-icon {
-      width: 22px;
-      height: 22px;
-      border-radius: 7px;
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
       background: var(--royal-50);
       color: var(--royal-850);
       display: flex;
@@ -2423,40 +2176,83 @@
       flex-shrink: 0;
     }
 
-    .life-card h4 { font-size: 11px; font-weight: 900; color: var(--royal-900); }
-    .life-card p { font-size: 9.5px; line-height: 1.42; font-weight: 600; color: var(--ink-700); }
+    .life-card h4 { font-size: 10.6px; font-weight: 900; color: var(--royal-900); }
+    .life-card p { font-size: 9px; line-height: 1.38; font-weight: 600; color: var(--ink-700); }
+
+    .checkup-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin-bottom: 7px;
+    }
+
+    .checkup-card {
+      background: linear-gradient(180deg, #FBF6E8 0%, #FFFFFF 100%);
+      border: 1px solid #EBD7A0;
+      border-radius: 10px;
+      padding: 6px 7px;
+      text-align: center;
+    }
+
+    .checkup-freq {
+      display: inline-block;
+      background: var(--royal-900);
+      color: var(--gold-300);
+      font-size: 8.2px;
+      font-weight: 800;
+      padding: 1px 7px;
+      border-radius: 99px;
+      margin-bottom: 3px;
+    }
+
+    .checkup-card strong {
+      display: block;
+      font-size: 9.8px;
+      font-weight: 900;
+      color: var(--royal-900);
+      margin-bottom: 1.5px;
+    }
+
+    .checkup-card span {
+      display: block;
+      font-size: 8.4px;
+      line-height: 1.3;
+      font-weight: 600;
+      color: var(--ink-700);
+    }
 
     .kit-box {
       background: linear-gradient(155deg, var(--royal-900), var(--royal-800));
       border: 1.5px solid var(--gold-500);
-      border-radius: 14px;
-      padding: 9px 11px;
+      border-radius: 13px;
+      padding: 8px 10px;
       color: #fff;
-      box-shadow: 0 6px 18px rgba(6, 20, 46, 0.18);
+      margin-bottom: 7px;
     }
 
     .kit-head {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
 
-    .kit-head h4 { font-size: 11.6px; font-weight: 900; color: var(--gold-300); }
+    .kit-head h4 { font-size: 11px; font-weight: 900; color: var(--gold-300); }
+
     .kit-counter {
-      font-size: 9.2px;
+      font-size: 8.8px;
       font-weight: 800;
       background: rgba(212, 175, 55, 0.2);
       border: 1px solid var(--gold-400);
       color: var(--gold-300);
-      padding: 1.5px 8px;
+      padding: 1px 8px;
       border-radius: 99px;
     }
 
     .kit-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 5px 7px;
+      gap: 4.5px 6px;
     }
 
     .kit-item {
@@ -2466,14 +2262,14 @@
       background: rgba(255, 255, 255, 0.07);
       border: 1px solid rgba(212, 175, 55, 0.26);
       border-radius: 8px;
-      padding: 5px 7px;
-      font-size: 9.5px;
+      padding: 4.5px 7px;
+      font-size: 9.2px;
       font-weight: 700;
       color: #fff;
       cursor: pointer;
       text-align: right;
       font-family: inherit;
-      transition: all 0.18s ease;
+      transition: background-color 0.14s ease, border-color 0.14s ease;
     }
 
     .kit-item:hover { background: rgba(212, 175, 55, 0.16); }
@@ -2485,42 +2281,54 @@
     }
 
     .kit-check {
-      width: 15px;
-      height: 15px;
+      width: 14px;
+      height: 14px;
       border-radius: 4px;
       border: 1.5px solid var(--gold-400);
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 10px;
+      font-size: 9.5px;
       font-weight: 900;
       flex-shrink: 0;
       color: #06142E;
       background: transparent;
     }
 
-    .kit-item.packed .kit-check {
-      background: var(--gold-400);
+    .kit-item.packed .kit-check { background: var(--gold-400); }
+
+    .visit-prep-strip {
+      background: var(--royal-50);
+      border: 1px solid #CFDDF5;
+      border-right: 4px solid var(--gold-500);
+      border-radius: 10px;
+      padding: 6px 9px;
+      font-size: 9.1px;
+      line-height: 1.38;
+      font-weight: 700;
+      color: var(--ink-900);
     }
 
+    .visit-prep-strip strong { color: var(--royal-900); font-weight: 900; }
+
     /* ==========================================================================
-       16. PAGE 10 — DEDICATED LUXURY ROYAL BACK COVER
+       16. PAGE 10 — UPGRADED ROYAL BACK COVER & PHARMACY CREST
        ========================================================================== */
     .back-cover-royal {
-      padding: 20px 24px 16px;
+      padding: 18px 22px 15px;
       color: #fff;
       justify-content: space-between;
       align-items: center;
       text-align: center;
     }
 
-    .back-crown-emblem {
+    .back-crest-emblem {
       position: relative;
       z-index: 6;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 4px;
+      gap: 2px;
     }
 
     .back-logos-trio {
@@ -2534,20 +2342,20 @@
     }
 
     .back-logo-big {
-      width: 68px;
-      height: 68px;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
       overflow: hidden;
       background: #fff;
       border: 2.5px solid var(--gold-400);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 0 4px rgba(212, 175, 55, 0.22);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4), 0 0 0 3px rgba(212, 175, 55, 0.22);
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: transform 0.25s ease;
+      transition: transform 0.18s ease;
     }
 
-    .back-logo-big:hover { transform: scale(1.07); }
+    .back-logo-big:hover { transform: scale(1.06); }
 
     .back-logo-big img,
     .back-logo-big svg {
@@ -2561,43 +2369,71 @@
 
     .back-quote-card {
       width: 100%;
-      padding: 14px 16px;
+      padding: 11px 15px;
       position: relative;
       z-index: 6;
     }
 
     .back-quote-title {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 900;
-      background: linear-gradient(120deg, #B8860B 0%, #F7DF84 26%, #FFFBE0 48%, #D4AF37 68%, #FFF2B8 88%, #B8860B 100%);
-      background-size: 220% auto;
+      background: var(--gold-foil-text);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.45));
-      animation: goldBannerFlow 5s linear infinite;
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
 
     .back-quote-sub {
-      font-size: 11.4px;
+      font-size: 10.8px;
       font-weight: 600;
       color: rgba(235, 243, 255, 0.94);
-      line-height: 1.55;
+      line-height: 1.5;
+    }
+
+    .back-pillars {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 7px;
+      position: relative;
+      z-index: 6;
+    }
+
+    .back-pillar-item {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(212, 175, 55, 0.34);
+      border-radius: 11px;
+      padding: 7px 6px;
+    }
+
+    .back-pillar-item strong {
+      display: block;
+      font-size: 10.4px;
+      font-weight: 900;
+      color: var(--gold-300);
+      margin-bottom: 1.5px;
+    }
+
+    .back-pillar-item span {
+      display: block;
+      font-size: 8.8px;
+      font-weight: 600;
+      color: rgba(235, 243, 255, 0.88);
     }
 
     .back-uni-box {
       width: 100%;
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid rgba(212, 175, 55, 0.35);
-      border-radius: 14px;
-      padding: 10px 14px;
+      border-radius: 13px;
+      padding: 8px 14px;
       position: relative;
       z-index: 6;
     }
 
     .back-uni-box strong {
       display: block;
-      font-size: 13px;
+      font-size: 12.6px;
       font-weight: 900;
       color: var(--gold-300);
       margin-bottom: 2px;
@@ -2605,42 +2441,96 @@
 
     .back-uni-box span {
       display: block;
-      font-size: 10.6px;
+      font-size: 10.2px;
       font-weight: 600;
       color: rgba(235, 243, 255, 0.9);
+    }
+
+    .back-emg-strip {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      position: relative;
+      z-index: 6;
+    }
+
+    .back-emg-pill {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 5.5px 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .back-emg-pill strong {
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--gold-300);
+    }
+
+    .back-actions-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      position: relative;
+      z-index: 6;
+      width: 100%;
     }
 
     .back-share-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      padding: 9px 22px;
+      gap: 7px;
+      padding: 8px 18px;
       border-radius: 999px;
       background: var(--gold-foil);
-      background-size: 200% 200%;
       border: 1px solid #FFF6CC;
       color: #051126;
       font-family: inherit;
-      font-size: 12px;
+      font-size: 11.4px;
       font-weight: 900;
       cursor: pointer;
-      box-shadow: 0 6px 22px rgba(184, 134, 11, 0.5), var(--gold-bevel);
-      text-shadow: 0 1px 0 rgba(255, 250, 224, 0.65);
-      position: relative;
-      z-index: 6;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      animation: goldFoilGleam 5s ease-in-out infinite;
+      box-shadow: 0 4px 14px rgba(184, 134, 11, 0.42), var(--gold-bevel);
+      transition: transform 0.15s ease;
     }
 
-    .back-share-btn:hover {
-      transform: translateY(-2px) scale(1.04);
-      box-shadow: 0 9px 26px rgba(212, 175, 55, 0.65), var(--gold-bevel);
+    .back-share-btn:hover { transform: translateY(-2px); }
+
+    .back-home-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px 15px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.55);
+      color: var(--gold-300);
+      font-family: inherit;
+      font-size: 11px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .back-home-btn:hover {
+      background: rgba(212, 175, 55, 0.18);
+      transform: translateY(-2px);
     }
 
     .back-cover-disclaimer {
-      font-size: 9px;
-      line-height: 1.4;
+      font-size: 8.8px;
+      line-height: 1.38;
       font-weight: 600;
       color: rgba(220, 232, 252, 0.82);
       position: relative;
@@ -2648,7 +2538,7 @@
     }
 
     /* ==========================================================================
-       17. ULTRA-COMPACT MOBILE SHELL (< 860px & <= 768px)
+       17. COMPACT MOBILE SHELL
        ========================================================================== */
     @media (max-width: 900px) {
       .btn-label { display: none; }
@@ -2680,9 +2570,6 @@
   </style>
 </head>
 <body>
-
-  <!-- Interactive 24k Gold Dust Studio Canvas -->
-  <canvas id="goldDustCanvas" aria-hidden="true"></canvas>
 
   <!-- Toast Status Feedback -->
   <div class="studio-toast" id="studioToast"></div>
@@ -2741,7 +2628,7 @@
   </div>
 
   <!-- ======================================================================
-       MAIN ZERO-CLIPPING APP SHELL (100dvh FLEX COLUMN)
+       MAIN APP SHELL
        ====================================================================== -->
   <div class="app-shell">
 
@@ -2829,7 +2716,7 @@
                  LEAF 0: Front = PAGE 1 (الغلاف الأمامي) | Back = PAGE 2
                  ============================================================ -->
             <div class="leaf" data-leaf="0" id="leaf0">
-              <!-- PAGE 1: FRONT COVER (ROYAL BLUE & GOLD — NO "إصدار ملكي" STAMP) -->
+              <!-- PAGE 1: FRONT COVER (CLEAN & FAST — MANDALA REMOVED) -->
               <div class="page-face front cover-face" data-page="1">
                 <div class="turn-shade"></div>
                 <div class="corner-curl"></div>
@@ -2838,24 +2725,10 @@
                   <div class="cover-pattern"></div>
                   <div class="royal-cover-frame"></div>
 
-                  <!-- Royal Corner Filigree Ornaments -->
                   <svg class="royal-corner tl" viewBox="0 0 32 32"><path d="M2 30 V8 Q2 2 8 2 H30 M6 26 V10 Q6 6 10 6 H26 M2 14 L14 2" fill="none" stroke="#D4AF37" stroke-width="1.6"/></svg>
                   <svg class="royal-corner tr" viewBox="0 0 32 32"><path d="M2 30 V8 Q2 2 8 2 H30 M6 26 V10 Q6 6 10 6 H26 M2 14 L14 2" fill="none" stroke="#D4AF37" stroke-width="1.6"/></svg>
                   <svg class="royal-corner bl" viewBox="0 0 32 32"><path d="M2 30 V8 Q2 2 8 2 H30 M6 26 V10 Q6 6 10 6 H26 M2 14 L14 2" fill="none" stroke="#D4AF37" stroke-width="1.6"/></svg>
                   <svg class="royal-corner br" viewBox="0 0 32 32"><path d="M2 30 V8 Q2 2 8 2 H30 M6 26 V10 Q6 6 10 6 H26 M2 14 L14 2" fill="none" stroke="#D4AF37" stroke-width="1.6"/></svg>
-
-                  <!-- Subtle Rotating Geometric Arabesque Mandala -->
-                  <svg class="cover-mandala" viewBox="0 0 200 200">
-                    <g fill="none" stroke="#D4AF37" stroke-width="0.9">
-                      <circle cx="100" cy="100" r="92"/>
-                      <circle cx="100" cy="100" r="74"/>
-                      <circle cx="100" cy="100" r="54"/>
-                      <rect x="35" y="35" width="130" height="130"/>
-                      <rect x="35" y="35" width="130" height="130" transform="rotate(45 100 100)"/>
-                      <rect x="52" y="52" width="96" height="96" transform="rotate(22.5 100 100)"/>
-                      <rect x="52" y="52" width="96" height="96" transform="rotate(67.5 100 100)"/>
-                    </g>
-                  </svg>
 
                   <div class="page-content cover-content">
                     <!-- 1. Official 3 Circular Medallion Logos -->
@@ -2874,7 +2747,7 @@
                       </div>
                     </div>
 
-                    <!-- 2. Liquid Gold Banner & Course Subtitle -->
+                    <!-- 2. Gold Banner & Course Subtitle -->
                     <div class="cover-banner-wrap">
                       <div class="cover-banner">كتيب توعية لمرضى السكر وأسرهم</div>
                       <div class="cover-course">ضمن حملة توعية بمقرر نشاط 3 Pharmacology</div>
@@ -2886,10 +2759,9 @@
                       <div class="cover-tagline">كل اللي محتاج تعرفه عن أنواعه في مصر ومواعيده وطريقة الحقن الصحيحة.</div>
                     </div>
 
-                    <!-- 4. Ivory Featured Card: Royal Blue & Gold Vial/Syringe/Pen + QR -->
+                    <!-- 4. Ivory Featured Card: Vial/Syringe/Pen + QR -->
                     <div class="cover-feature-card">
                       <div class="cover-visual-tools">
-                        <!-- Royal Blue & Gold Vial -->
                         <svg class="tool-svg" viewBox="0 0 54 104" width="40" height="74" aria-label="زجاجة أنسولين">
                           <rect x="17" y="20" width="20" height="7" rx="2" fill="#D4AF37"/>
                           <rect x="19" y="27" width="16" height="5" fill="#CBD5E1"/>
@@ -2900,7 +2772,6 @@
                           <line x1="16" y1="71" x2="30" y2="71" stroke="#C5D6F2" stroke-width="2" stroke-linecap="round"/>
                           <path d="M13 81 L41 81 L41 88 Q41 93 36 93 L18 93 Q13 93 13 88 Z" fill="#D5E4FA" opacity="0.7"/>
                         </svg>
-                        <!-- Royal Blue & Gold Syringe -->
                         <svg class="tool-svg" viewBox="0 0 42 104" width="32" height="74" aria-label="سرنجة أنسولين">
                           <path d="M17 5 L25 5 L27 23 L15 23 Z" fill="#D4AF37"/>
                           <rect x="15" y="23" width="12" height="52" rx="2" fill="#EEF4FD" stroke="#1F57B5" stroke-width="1.6"/>
@@ -2918,7 +2789,6 @@
                           <rect x="19" y="79" width="4" height="15" fill="#7EA6E6"/>
                           <rect x="13" y="94" width="16" height="4.5" rx="2" fill="#1F57B5"/>
                         </svg>
-                        <!-- Royal Sapphire & Gold Insulin Pen -->
                         <svg class="tool-svg" viewBox="0 0 42 104" width="32" height="74" aria-label="قلم أنسولين">
                           <rect x="19" y="4" width="4" height="11" rx="2" fill="#94A3B8"/>
                           <path d="M15 15 L27 15 L25 24 L17 24 Z" fill="#D4AF37"/>
@@ -2961,7 +2831,7 @@
                       </button>
                     </div>
 
-                    <!-- 5. Supervision Card with Perimeter Rotating Gold Ribbon -->
+                    <!-- 5. Supervision Card -->
                     <div class="cover-glass-box">
                       <div class="cover-box-title">تحت إشراف</div>
                       <div class="sup-row"><span class="sup-name">أ.د/ منال عيد</span><span class="sup-role">عميد كلية الصيدلة</span></div>
@@ -2970,7 +2840,7 @@
                       <div class="sup-row"><span class="sup-name">د/ هبة بهريز</span><span class="sup-role">مدرس مساعد بقسم الأدوية والسموم</span></div>
                     </div>
 
-                    <!-- 6. Team Card with Perimeter Rotating Gold Ribbon -->
+                    <!-- 6. Team Card -->
                     <div class="cover-glass-box">
                       <div class="cover-box-title">فريق العمل Team</div>
                       <div class="team-leads">
@@ -3027,7 +2897,6 @@
                       <h2 class="sec-title">يعني إيه أنسولين؟</h2>
                     </div>
 
-                    <!-- Exact Insulin & Diabetes Definition -->
                     <div class="def-card">
                       <svg viewBox="0 0 48 48" width="42" height="42" style="flex-shrink:0" aria-hidden="true">
                         <circle cx="24" cy="24" r="22" fill="#06142E" stroke="#D4AF37" stroke-width="1.8"/>
@@ -3121,7 +2990,6 @@
                     </div>
                     <p class="intro-note">الأسماء أمثلة شائعة والتوفر بيتغير. الصورة لمثال واحد من كل نوع، والشريط بيوضح مدة المفعول بالتقريب، وبتختلف حسب المستحضر والجرعة.</p>
 
-                    <!-- Type 1: Rapid-Acting -->
                     <div class="type-card" style="--c-accent:#D97706; --c-accent-light:#F59E0B; --c-soft:#FFFBEB; --c-border:#FDE68A;">
                       <div class="type-strip">1</div>
                       <div class="type-body">
@@ -3152,7 +3020,6 @@
                       </div>
                     </div>
 
-                    <!-- Type 2: Short-Acting -->
                     <div class="type-card" style="--c-accent:#1D6FA5; --c-accent-light:#3B82F6; --c-soft:#EFF6FF; --c-border:#BFDBFE;">
                       <div class="type-strip">2</div>
                       <div class="type-body">
@@ -3182,7 +3049,6 @@
                       </div>
                     </div>
 
-                    <!-- Type 3: Intermediate-Acting -->
                     <div class="type-card" style="--c-accent:#6B328A; --c-accent-light:#9333EA; --c-soft:#FAF5FF; --c-border:#E9D5FF; margin-bottom:0;">
                       <div class="type-strip">3</div>
                       <div class="type-body">
@@ -3222,7 +3088,7 @@
                 </div>
               </div>
 
-              <!-- PAGE 4: تابع: أنواع الأنسولين (INTERACTIVE BASAL/ULTRA-LONG CURVE + PEN/CARTRIDGE WARNING) -->
+              <!-- PAGE 4: تابع: أنواع الأنسولين -->
               <div class="page-face back" data-page="4">
                 <div class="turn-shade"></div>
                 <div class="corner-curl"></div>
@@ -3234,7 +3100,6 @@
                       <h2 class="sec-title">تابع: أنواع الأنسولين</h2>
                     </div>
 
-                    <!-- Type 4: Interactive Long-Acting & Ultra-Long Basal Card -->
                     <div class="basal-royal-card interactive" id="basalCard">
                       <div class="basal-head">
                         <div class="basal-title-wrap">
@@ -3244,7 +3109,6 @@
                         <span class="basal-peakless-badge" id="basalTypeBadge">مفعول ثابت بلا قمة</span>
                       </div>
 
-                      <!-- Animated Morphing SVG Pharmacokinetic Curve -->
                       <div class="basal-curve-stage">
                         <div class="basal-curve-caption" id="basalCurveCaption">تغطية قاعدية ثابتة ومستقرة (حتى 24 ساعة)</div>
                         <svg viewBox="0 0 320 46" width="100%" height="42" aria-label="منحنى مفعول الأنسولين القاعدي">
@@ -3254,14 +3118,10 @@
                               <stop offset="100%" stop-color="#D4AF37" stop-opacity="0.02"/>
                             </linearGradient>
                           </defs>
-                          <!-- Dashed target level -->
                           <line x1="16" y1="12" x2="304" y2="12" stroke="rgba(247,226,156,0.22)" stroke-width="1" stroke-dasharray="3 3"/>
-                          <!-- Morphing Area & Stroke -->
                           <path id="basalCurveArea" d="M 16 33 Q 38 12, 64 12 L 155 12 Q 182 12, 200 33 L 16 33 Z" fill="url(#basalGoldGrad)"/>
                           <path id="basalCurvePath" d="M 16 33 Q 38 12, 64 12 L 155 12 Q 182 12, 200 33" fill="none" stroke="#F7E29C" stroke-width="2.4" stroke-linecap="round"/>
-                          <!-- Glowing Endpoint Dot -->
                           <circle id="basalPulseDot" cx="155" cy="12" r="4" fill="#FFF3C4" stroke="#D4AF37" stroke-width="2"/>
-                          <!-- Time axis labels -->
                           <g fill="#A6B9D8" font-size="7.5" font-weight="700" font-family="Cairo,sans-serif">
                             <text x="16" y="43" text-anchor="start">0 س</text>
                             <text x="95" y="43" text-anchor="middle">12 س</text>
@@ -3272,7 +3132,6 @@
                         </svg>
                       </div>
 
-                      <!-- 4 Interactive Basal / Ultra-Long Selector Tabs -->
                       <div class="basal-tabs">
                         <button type="button" class="basal-tab interactive active" data-basal="lantus">
                           <strong>لانتوس</strong>
@@ -3292,7 +3151,6 @@
                         </button>
                       </div>
 
-                      <!-- Dynamic Detail Box -->
                       <div class="basal-detail-box">
                         <div class="basal-detail-top">
                           <strong id="basalDetailTitle">لانتوس Lantus (Glargine U-100)</strong>
@@ -3304,7 +3162,6 @@
                       <div class="basal-timing-bar">الميعاد: مرة يومياً في نفس الساعة، وما يتخلطش مع أي نوع آخر</div>
                     </div>
 
-                    <!-- Type 5: Premixed -->
                     <div class="type-card" style="--c-accent:#C22B62; --c-accent-light:#EC4899; --c-soft:#FFF1F6; --c-border:#FBCFE8; margin-bottom:6px;">
                       <div class="type-strip">5</div>
                       <div class="type-body" style="padding:6.5px 10px;">
@@ -3352,7 +3209,6 @@
                       </div>
                     </div>
 
-                    <!-- Exact Concentration & Pen/Cartridge Warning -->
                     <div class="conc-alert">
                       <strong>انتبه للتركيز والأقلام:</strong> أغلب الأنسولين في مصر <strong>100 وحدة/مل</strong> ويتسحب بسرنجة <strong>U-100</strong>. لو التركيز مختلف (مثل توجيو 300 وحدة/مل) اسأل الصيدلي. <strong>ممنوع سحب الأنسولين من أي قلم جاهز أو خرطوشة باستخدام السرنجة</strong> لأن ده ممكن يسبب جرعة زايدة خطيرة أو يبوظ القلم.
                     </div>
@@ -3459,18 +3315,11 @@
                     <p class="intro-note" style="margin-bottom:5px;">الجسم من قدام (شمال) ومن ورا (يمين)، والأماكن الملوّنة هي أماكن الحقن — <strong>اضغط على أي منطقة لعرض التفاصيل وسرعة الامتصاص:</strong></p>
 
                     <div class="anatomy-stage">
-                      <!-- Subtle Vitruvian Gold Geometry Behind Body Diagram -->
-                      <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.08;pointer-events:none;" viewBox="0 0 400 200">
-                        <circle cx="100" cy="100" r="85" fill="none" stroke="#B38622" stroke-width="1.2"/>
-                        <rect x="25" y="25" width="150" height="150" fill="none" stroke="#1F57B5" stroke-width="1"/>
-                      </svg>
-
                       <div class="body-svg-wrap">
                         <svg viewBox="0 0 210 212" width="184" height="184" aria-label="أماكن حقن الأنسولين على الجسم">
                           <text x="52" y="13" text-anchor="middle" fill="#06142E" font-family="Cairo,sans-serif" font-size="9.5" font-weight="800">من قدام (شمال)</text>
                           <text x="158" y="13" text-anchor="middle" fill="#06142E" font-family="Cairo,sans-serif" font-size="9.5" font-weight="800">من ورا (يمين)</text>
 
-                          <!-- Front Body Silhouette -->
                           <g fill="#DCE6F7" stroke="#53698F" stroke-width="1.3">
                             <circle cx="52" cy="34" r="11"/>
                             <path d="M46 45 L58 45 L67 52 L77 88 L71 91 L64 64 L63 108 L68 158 L66 200 L56 200 L54 140 L50 140 L48 200 L38 200 L36 158 L41 108 L40 64 L33 91 L27 88 L37 52 Z"/>
@@ -3481,7 +3330,6 @@
                           <ellipse class="body-zone interactive" data-zone="thigh" cx="42" cy="134" rx="5.5" ry="15" transform="rotate(-6 42 134)"/>
                           <ellipse class="body-zone interactive" data-zone="thigh" cx="62" cy="134" rx="5.5" ry="15" transform="rotate(6 62 134)"/>
 
-                          <!-- Back Body Silhouette -->
                           <g fill="#DCE6F7" stroke="#53698F" stroke-width="1.3">
                             <circle cx="158" cy="34" r="11"/>
                             <path d="M152 45 L164 45 L173 52 L183 88 L177 91 L170 64 L169 108 L174 158 L172 200 L162 200 L160 140 L156 140 L154 200 L144 200 L142 158 L147 108 L146 64 L139 91 L133 88 L143 52 Z"/>
@@ -3559,7 +3407,7 @@
                  LEAF 3: Front = PAGE 7 | Back = PAGE 8
                  ============================================================ -->
             <div class="leaf" data-leaf="3" id="leaf3">
-              <!-- PAGE 7: 5 — طريقة الحقن بالقلم & 6 — حفظ الأنسولين (CLEAN STEPS, NO CHECKMARKS) -->
+              <!-- PAGE 7: 5 — طريقة الحقن بالقلم & 6 — حفظ الأنسولين -->
               <div class="page-face front" data-page="7">
                 <div class="turn-shade"></div>
                 <div class="corner-curl"></div>
@@ -3582,7 +3430,6 @@
                         <div class="step-row"><span class="step-num">7</span><span>شيل الإبرة وارميها في علبة مخصصة للأدوات الحادة، أو علبة بلاستيك سميكة بغطا محكم.</span></div>
                       </div>
 
-                      <!-- 90° Pen Diagram + Circular Gold 10-Second Countdown Timer -->
                       <div class="pen-diagram-card">
                         <svg viewBox="0 0 116 112" width="108" height="96" aria-label="القلم واقف بزاوية قائمة على الجلد">
                           <rect x="6" y="88" width="104" height="8" rx="2" fill="#F4C7A3"/>
@@ -3646,7 +3493,7 @@
                 </div>
               </div>
 
-              <!-- PAGE 8: 7 — الطوارئ وبياناتي (INTERIOR PAGE) -->
+              <!-- PAGE 8: 7 — الطوارئ وبياناتي -->
               <div class="page-face back" data-page="8">
                 <div class="turn-shade"></div>
                 <div class="corner-curl"></div>
@@ -3675,7 +3522,6 @@
                       <strong>ارتفاع السكر — روح الطوارئ فوراً لو:</strong> السكر فوق 300 ومش بينزل · ترجيع متكرر أو مش قادر تشرب · وجع بطن شديد · صعوبة في التنفس أو ريحة أسيتون في النفس · نعاس شديد. لو عندك شرائط كيتون قيسها. وفي أيام التعب ما توقفش الأنسولين القاعدي من غير ما تسأل طبيبك، واشرب مية كتير.
                     </div>
 
-                    <!-- Interactive Fillable "بياناتي" Card -->
                     <div class="my-data-card interactive" id="myDataCard">
                       <div class="my-data-head">
                         <h4>بياناتي</h4>
@@ -3730,27 +3576,28 @@
             </div>
 
             <!-- ============================================================
-                 LEAF 4: Front = PAGE 9 (حياتك اليومية) | Back = PAGE 10 (غلاف خلفي ملكي مستقل)
+                 LEAF 4: Front = PAGE 9 (حياتك اليومية الموسعة) | Back = PAGE 10 (غلاف خلفي مطور)
                  ============================================================ -->
             <div class="leaf" data-leaf="4" id="leaf4">
-              <!-- PAGE 9: 8 — حياتك اليومية مع الأنسولين + شنطتك اليومية -->
+              <!-- PAGE 9: 8 — حياتك اليومية مع الأنسولين (موسّعة ومفيدة للمرضى) -->
               <div class="page-face front" data-page="9">
                 <div class="turn-shade"></div>
                 <div class="corner-curl"></div>
 
                 <div class="page-scaler">
                   <div class="page-content">
-                    <div class="sec-head">
+                    <div class="sec-head" style="margin-bottom:5px;">
                       <div class="sec-badge royal">8</div>
                       <h2 class="sec-title">حياتك اليومية مع الأنسولين</h2>
                     </div>
-                    <p class="intro-note" style="margin-bottom:7px;">الأنسولين مش بيمنعك تعيش حياتك، تسافر، أو تمارس رياضتك؛ شوية تنظيم بسيط بيخلي يومك آمن ومستقر.</p>
+                    <p class="intro-note" style="margin-bottom:6px;">الأنسولين مش بيمنعك تعيش حياتك، تسافر، أو تمارس رياضتك؛ شوية تنظيم بسيط بيخلي يومك آمن ومستقر.</p>
 
+                    <!-- 6 Practical Patient Care Cards -->
                     <div class="life-grid">
                       <div class="life-card">
                         <div class="life-card-head">
                           <span class="life-icon">
-                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="5" r="2"/><path d="M9 20l3-6 3 6M6 12l6-2 6 2"/></svg>
+                            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="5" r="2"/><path d="M9 20l3-6 3 6M6 12l6-2 6 2"/></svg>
                           </span>
                           <h4>الرياضة والمجهود</h4>
                         </div>
@@ -3760,7 +3607,7 @@
                       <div class="life-card gold-top">
                         <div class="life-card-head">
                           <span class="life-icon">
-                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
                           </span>
                           <h4>السفر والمواصلات</h4>
                         </div>
@@ -3770,7 +3617,7 @@
                       <div class="life-card gold-top">
                         <div class="life-card-head">
                           <span class="life-icon">
-                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
                           </span>
                           <h4>الصيام في رمضان</h4>
                         </div>
@@ -3780,11 +3627,51 @@
                       <div class="life-card">
                         <div class="life-card-head">
                           <span class="life-icon">
-                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M2 12h20"/></svg>
+                            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M2 12h20"/></svg>
                           </span>
                           <h4>أيام التعب والمرض</h4>
                         </div>
                         <p>السكر ممكن يعلى وقت السخونية أو العدوى. ما توقفش القاعدي أبداً، واشرب مية كتير وقيس باستمرار.</p>
+                      </div>
+
+                      <div class="life-card">
+                        <div class="life-card-head">
+                          <span class="life-icon">
+                            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 17c0-4 3-7 8-7s8 3 8 7v2H4v-2z"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                          </span>
+                          <h4>العناية بالقدمين يومياً</h4>
+                        </div>
+                        <p>افحص قدميك يومياً لأي جرح أو احمرار، نشّف بين الصوابع كويس، وارتدِ حذاءً مريحاً ومقفولاً.</p>
+                      </div>
+
+                      <div class="life-card gold-top">
+                        <div class="life-card-head">
+                          <span class="life-icon">
+                            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                          </span>
+                          <h4>التغذية وتنظيم الوجبات</h4>
+                        </div>
+                        <p>وزّع وجباتك بانتظام، قلّل السكريات السريعة، وما تفوّتش وجبة بعد جرعة السريع أو المخلوط.</p>
+                      </div>
+                    </div>
+
+                    <!-- Periodic Medical Checkups Strip -->
+                    <div class="sub-heading" style="margin:3px 0 4px;">فحوصاتك الدورية المهمة</div>
+                    <div class="checkup-grid">
+                      <div class="checkup-card">
+                        <span class="checkup-freq">كل 3 – 6 شهور</span>
+                        <strong>السكر التراكمي</strong>
+                        <span>لمتابعة متوسط ضبط السكر</span>
+                      </div>
+                      <div class="checkup-card">
+                        <span class="checkup-freq">مرة سنوياً</span>
+                        <strong>قاع العين والأسنان</strong>
+                        <span>للكشف والوقاية المبكرة</span>
+                      </div>
+                      <div class="checkup-card">
+                        <span class="checkup-freq">مرة سنوياً</span>
+                        <strong>الكلى والدهون</strong>
+                        <span>حسب إرشاد طبيبك المعالج</span>
                       </div>
                     </div>
 
@@ -3803,6 +3690,11 @@
                         <button type="button" class="kit-item interactive" data-kit="5"><span class="kit-check"></span><span>كارت «بياناتي» وأرقام الطوارئ</span></button>
                       </div>
                     </div>
+
+                    <!-- Before Visiting Your Doctor Reminder -->
+                    <div class="visit-prep-strip">
+                      <strong>قبل كل زيارة للطبيب خد معاك:</strong> دفتر قياسات السكر اليومية · قائمة أدويتك وجرعاتك الحالية · أي مواقف هبوط أو ارتفاع حصلتلك.
+                    </div>
                   </div>
 
                   <div class="page-footer">
@@ -3812,7 +3704,7 @@
                 </div>
               </div>
 
-              <!-- PAGE 10: DEDICATED INDEPENDENT LUXURY ROYAL BACK COVER -->
+              <!-- PAGE 10: UPGRADED ROYAL BACK COVER (NEW PHARMACY CREST, NO MANDALA) -->
               <div class="page-face back cover-face" data-page="10">
                 <div class="turn-shade"></div>
                 <div class="corner-curl"></div>
@@ -3826,26 +3718,36 @@
                   <svg class="royal-corner bl" viewBox="0 0 32 32"><path d="M2 30 V8 Q2 2 8 2 H30 M6 26 V10 Q6 6 10 6 H26 M2 14 L14 2" fill="none" stroke="#D4AF37" stroke-width="1.6"/></svg>
                   <svg class="royal-corner br" viewBox="0 0 32 32"><path d="M2 30 V8 Q2 2 8 2 H30 M6 26 V10 Q6 6 10 6 H26 M2 14 L14 2" fill="none" stroke="#D4AF37" stroke-width="1.6"/></svg>
 
-                  <svg class="cover-mandala" viewBox="0 0 200 200">
-                    <g fill="none" stroke="#D4AF37" stroke-width="0.9">
-                      <circle cx="100" cy="100" r="92"/>
-                      <circle cx="100" cy="100" r="74"/>
-                      <circle cx="100" cy="100" r="54"/>
-                      <rect x="35" y="35" width="130" height="130"/>
-                      <rect x="35" y="35" width="130" height="130" transform="rotate(45 100 100)"/>
-                    </g>
-                  </svg>
-
                   <div class="page-content back-cover-royal">
-                    <!-- Royal Crown & Laurel Crest -->
-                    <div class="back-crown-emblem">
-                      <svg viewBox="0 0 120 48" width="110" height="44" aria-hidden="true">
-                        <path d="M36 32 L44 16 L60 26 L76 16 L84 32 Z" fill="none" stroke="#F7E29C" stroke-width="2" stroke-linejoin="round"/>
-                        <circle cx="44" cy="13" r="2.2" fill="#F7E29C"/>
-                        <circle cx="60" cy="11" r="2.8" fill="#F7E29C"/>
-                        <circle cx="76" cy="13" r="2.2" fill="#F7E29C"/>
-                        <line x1="20" y1="39" x2="100" y2="39" stroke="#D4AF37" stroke-width="1.5"/>
-                        <circle cx="60" cy="39" r="3" fill="#D4AF37"/>
+                    <!-- Upgraded Royal Pharmacy & Laurel Gold Crest -->
+                    <div class="back-crest-emblem">
+                      <svg viewBox="0 0 180 64" width="166" height="58" aria-label="شعار الصيدلة والتوعية الصحية">
+                        <defs>
+                          <linearGradient id="crestGold" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#FFF7CE"/>
+                            <stop offset="50%" stop-color="#D4AF37"/>
+                            <stop offset="100%" stop-color="#9A6B0E"/>
+                          </linearGradient>
+                        </defs>
+                        <!-- Side ornamental lines -->
+                        <line x1="10" y1="32" x2="54" y2="32" stroke="url(#crestGold)" stroke-width="1.2" opacity="0.75"/>
+                        <line x1="126" y1="32" x2="170" y2="32" stroke="url(#crestGold)" stroke-width="1.2" opacity="0.75"/>
+                        <circle cx="54" cy="32" r="2.2" fill="#F7E29C"/>
+                        <circle cx="126" cy="32" r="2.2" fill="#F7E29C"/>
+                        <!-- Laurel arcs -->
+                        <path d="M68 50 Q56 36 64 16" fill="none" stroke="url(#crestGold)" stroke-width="1.8" stroke-linecap="round"/>
+                        <path d="M112 50 Q124 36 116 16" fill="none" stroke="url(#crestGold)" stroke-width="1.8" stroke-linecap="round"/>
+                        <path d="M61 42 L55 39 M59 32 L53 30 M61 22 L56 19" stroke="#F7E29C" stroke-width="1.4" stroke-linecap="round"/>
+                        <path d="M119 42 L125 39 M121 32 L127 30 M119 22 L124 19" stroke="#F7E29C" stroke-width="1.4" stroke-linecap="round"/>
+                        <!-- Central Shield Medallion -->
+                        <path d="M90 7 L110 15 V31 C110 44 101 52 90 57 C79 52 70 44 70 31 V15 Z" fill="#091D42" stroke="url(#crestGold)" stroke-width="2"/>
+                        <path d="M90 11 L106 18 V31 C106 41 99 48 90 52 C81 48 74 41 74 31 V18 Z" fill="none" stroke="rgba(255,245,200,0.35)" stroke-width="1"/>
+                        <!-- Bowl of Hygieia / Medical Care Symbol inside Shield -->
+                        <path d="M80 28 H100 Q98 37 90 38 Q82 37 80 28 Z" fill="url(#crestGold)"/>
+                        <rect x="88.5" y="37" width="3" height="8" fill="url(#crestGold)"/>
+                        <rect x="83" y="44" width="14" height="2.6" rx="1.3" fill="url(#crestGold)"/>
+                        <path d="M91 17 Q96 19 92 24 Q87 28 91 32" fill="none" stroke="#FFF7CE" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="91" cy="16.5" r="1.6" fill="#FFF7CE"/>
                       </svg>
                     </div>
 
@@ -3865,11 +3767,27 @@
                       </div>
                     </div>
 
-                    <!-- Royal Glass Closing Message Card with Rotating Gold Border -->
+                    <!-- Royal Glass Closing Message Card -->
                     <div class="cover-glass-box back-quote-card">
                       <div class="back-quote-title">صحتك أمانة.. ووعيك هو البداية</div>
                       <div class="back-quote-sub">
                         التزامك بجرعات الأنسولين في مواعيدها، ومتابعة قياس السكر بانتظام، والتواصل المستمر مع طبيبك وصيدليك يضمن لك حياة صحية مستقرة وآمنة بإذن الله.
+                      </div>
+                    </div>
+
+                    <!-- 3 Golden Pillars Summary -->
+                    <div class="back-pillars">
+                      <div class="back-pillar-item">
+                        <strong>انتظام الجرعة</strong>
+                        <span>في ميعادها يومياً</span>
+                      </div>
+                      <div class="back-pillar-item">
+                        <strong>قياس مستمر</strong>
+                        <span>لسكر آمن ومستقر</span>
+                      </div>
+                      <div class="back-pillar-item">
+                        <strong>استشارة طبيبك</strong>
+                        <span>قبل أي تعديل</span>
                       </div>
                     </div>
 
@@ -3879,11 +3797,29 @@
                       <span>قسم الأدوية والسموم — حملة التوعية بمقرر نشاط 3 Pharmacology</span>
                     </div>
 
-                    <!-- Share Digital Edition Button -->
-                    <button type="button" class="back-share-btn interactive" id="btnBackShare">
-                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-                      <span>مشاركة النسخة الرقمية للمجلة</span>
-                    </button>
+                    <!-- Quick Emergency Numbers Strip -->
+                    <div class="back-emg-strip">
+                      <a href="tel:123" class="back-emg-pill interactive">
+                        <span>الإسعاف</span>
+                        <strong>123</strong>
+                      </a>
+                      <a href="tel:105" class="back-emg-pill interactive">
+                        <span>وزارة الصحة</span>
+                        <strong>105</strong>
+                      </a>
+                    </div>
+
+                    <!-- Action Buttons: Share + Back to Front Cover -->
+                    <div class="back-actions-row">
+                      <button type="button" class="back-share-btn interactive" id="btnBackShare">
+                        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                        <span>مشاركة النسخة الرقمية</span>
+                      </button>
+                      <button type="button" class="back-home-btn interactive" id="btnBackToCover">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 14 4 9 9 4"/><path d="M20 20v-7a4 4 0 0 0-4-4H4"/></svg>
+                        <span>العودة للغلاف</span>
+                      </button>
+                    </div>
 
                     <!-- Closing Disclaimer -->
                     <div class="back-cover-disclaimer">
@@ -3943,15 +3879,12 @@
   </div><!-- /.app-shell -->
 
   <!-- ======================================================================
-       3D FLIPBOOK ENGINE, VIRTUAL CANVAS SCALER & INTERACTIVE WIDGETS
+       FAST 3D FLIPBOOK ENGINE & INTERACTIVE WIDGETS
        ====================================================================== -->
   <script>
     (function () {
       'use strict';
 
-      /* --------------------------------------------------------------------
-         1. CONSTANTS & STATE (10 PAGES / 5 LEAVES)
-         -------------------------------------------------------------------- */
       const TOTAL_PAGES = 10;
       const TOTAL_LEAVES = 5;
       const VIRTUAL_W = 520;
@@ -3960,7 +3893,7 @@
       const ZOOM_STEPS = [1.0, 1.25, 1.5, 1.75];
 
       const TOC_ITEMS = [
-        { page: 1, num: '1', title: 'الغلاف الأمامي الملكي', desc: 'الأنسولين صديقك مش عدوك • الشعارات وفريق العمل', bg: 'linear-gradient(135deg,#0E2B5C,#06142E)' },
+        { page: 1, num: '1', title: 'الغلاف الأمامي', desc: 'الأنسولين صديقك مش عدوك • الشعارات وفريق العمل', bg: 'linear-gradient(135deg,#0E2B5C,#06142E)' },
         { page: 2, num: '2', title: '1. يعني إيه أنسولين؟', desc: 'التعريف الطبي • مين بيحتاجه • إشاعات وحقايق', bg: 'linear-gradient(135deg,#D4AF37,#9E7318)' },
         { page: 3, num: '3', title: '2. أنواع الأنسولين (ج1)', desc: 'سريع جداً • قصير المفعول • متوسط المفعول', bg: 'linear-gradient(135deg,#1D6FA5,#12466B)' },
         { page: 4, num: '4', title: 'تابع: أنواع الأنسولين (القاعدي)', desc: 'منحنى القاعدي والألترا لونج • المخلوط • التركيز', bg: 'linear-gradient(135deg,#0E2B5C,#1F57B5)' },
@@ -3968,8 +3901,8 @@
         { page: 6, num: '6', title: '4. أماكن الحقن (تفاعلي)', desc: 'خريطة الجسم • سرعة الامتصاص • تغيير المكان والإبر', bg: 'linear-gradient(135deg,#164085,#091D42)' },
         { page: 7, num: '7', title: '5. طريقة الحقن و 6. الحفظ', desc: '7 خطوات بالقلم • عدّاد 10 ثواني • حفظ الأنسولين', bg: 'linear-gradient(135deg,#D97706,#92400E)' },
         { page: 8, num: '8', title: '7. الطوارئ وبطاقة بياناتي', desc: 'هبوط السكر 15/15 • بطاقة بياناتك • 123 و 105', bg: 'linear-gradient(135deg,#B91C1C,#7F1D1D)' },
-        { page: 9, num: '9', title: '8. حياتك اليومية مع الأنسولين', desc: 'الرياضة • السفر • رمضان • شنطتك اليومية الجاهزة', bg: 'linear-gradient(135deg,#1F57B5,#0E2B5C)' },
-        { page: 10, num: '10', title: 'الغلاف الخلفي الملكي', desc: 'رسالة ختامية • شعارات الجامعة والكلية • المشاركة', bg: 'linear-gradient(135deg,#06142E,#153D82)' }
+        { page: 9, num: '9', title: '8. حياتك اليومية مع الأنسولين', desc: 'الرياضة • السفر • القدمين • التغذية • الفحوصات • شنطتك', bg: 'linear-gradient(135deg,#1F57B5,#0E2B5C)' },
+        { page: 10, num: '10', title: 'الغلاف الخلفي', desc: 'رسالة ختامية • القواعد الذهبية • المشاركة والعودة', bg: 'linear-gradient(135deg,#06142E,#153D82)' }
       ];
 
       const BASAL_TYPES = {
@@ -4042,9 +3975,6 @@
         audioCtx: null
       };
 
-      /* --------------------------------------------------------------------
-         2. DOM REFERENCES
-         -------------------------------------------------------------------- */
       const rootEl         = document.documentElement;
       const headerBarWrap  = document.getElementById('headerBarWrap');
       const dockBarWrap    = document.getElementById('dockBarWrap');
@@ -4085,79 +4015,13 @@
       const qrModal        = document.getElementById('qrModal');
       const btnOpenQr      = document.getElementById('btnOpenQr');
       const btnBackShare   = document.getElementById('btnBackShare');
+      const btnBackToCover = document.getElementById('btnBackToCover');
       const btnCloseQr     = document.getElementById('btnCloseQr');
       const shareLinkInput = document.getElementById('shareLinkInput');
       const btnCopyLink    = document.getElementById('btnCopyLink');
 
       /* --------------------------------------------------------------------
-         3. INTERACTIVE 24K GOLD DUST PARTICLES CANVAS
-         -------------------------------------------------------------------- */
-      (function initGoldDustCanvas() {
-        const canvas = document.getElementById('goldDustCanvas');
-        if (!canvas) return;
-        const ctx = canvas.getContext('2d');
-        let w = 0, h = 0;
-        let mouseX = -9999, mouseY = -9999;
-        const particles = [];
-        const COUNT = 44;
-
-        function resizeCanvas() {
-          w = canvas.width = window.innerWidth;
-          h = canvas.height = window.innerHeight;
-        }
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
-
-        window.addEventListener('mousemove', (e) => {
-          mouseX = e.clientX;
-          mouseY = e.clientY;
-        }, { passive: true });
-
-        for (let i = 0; i < COUNT; i++) {
-          particles.push({
-            x: Math.random() * (w || 1200),
-            y: Math.random() * (h || 800),
-            r: 0.9 + Math.random() * 2.1,
-            vx: (Math.random() - 0.5) * 0.28,
-            vy: -0.15 - Math.random() * 0.35,
-            alpha: 0.25 + Math.random() * 0.55,
-            phase: Math.random() * Math.PI * 2
-          });
-        }
-
-        function animateDust() {
-          ctx.clearRect(0, 0, w, h);
-          for (let i = 0; i < particles.length; i++) {
-            const p = particles[i];
-            p.phase += 0.025;
-            p.x += p.vx + Math.sin(p.phase) * 0.14;
-            p.y += p.vy;
-
-            const dx = p.x - mouseX;
-            const dy = p.y - mouseY;
-            const dist = Math.hypot(dx, dy);
-            if (dist < 110 && dist > 1) {
-              p.x += (dx / dist) * 0.9;
-              p.y += (dy / dist) * 0.9;
-            }
-
-            if (p.y < -10) { p.y = h + 10; p.x = Math.random() * w; }
-            if (p.x < -10) p.x = w + 10;
-            if (p.x > w + 10) p.x = -10;
-
-            const twinkle = p.alpha * (0.65 + 0.35 * Math.sin(p.phase * 1.4));
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(247, 226, 156, ${twinkle.toFixed(3)})`;
-            ctx.fill();
-          }
-          requestAnimationFrame(animateDust);
-        }
-        requestAnimationFrame(animateDust);
-      })();
-
-      /* --------------------------------------------------------------------
-         4. PROPORTIONAL VIRTUAL CANVAS SCALING (resizeBook)
+         1. PROPORTIONAL VIRTUAL CANVAS SCALING
          -------------------------------------------------------------------- */
       function resizeBook() {
         const vv = window.visualViewport;
@@ -4168,8 +4032,8 @@
         const dockH   = dockBarWrap ? dockBarWrap.getBoundingClientRect().height : 56;
         const stageRect = stageViewport.getBoundingClientRect();
 
-        const padV = 40;
-        const padH = vw < 900 ? 32 : 144;
+        const padV = 36;
+        const padH = vw < 900 ? 28 : 140;
 
         const availW = Math.max(180, Math.min(vw, stageRect.width || vw) - padH);
         const availH = Math.max(240, Math.min(vh - headerH - dockH, stageRect.height || (vh - headerH - dockH)) - padV);
@@ -4211,7 +4075,7 @@
       }
 
       /* --------------------------------------------------------------------
-         5. SYNTHESIZED WEB AUDIO API PAPER RUSTLE SOUND
+         2. SYNTHESIZED WEB AUDIO PAPER RUSTLE
          -------------------------------------------------------------------- */
       function playPageFlipSound(reverse = false) {
         if (!state.soundEnabled) return;
@@ -4223,7 +4087,7 @@
           if (ctx.state === 'suspended') ctx.resume();
 
           const now = ctx.currentTime;
-          const duration = 0.27;
+          const duration = 0.22;
           const sampleRate = ctx.sampleRate;
           const bufferSize = Math.floor(sampleRate * duration);
           const noiseBuffer = ctx.createBuffer(1, bufferSize, sampleRate);
@@ -4231,7 +4095,7 @@
 
           for (let i = 0; i < bufferSize; i++) {
             const t = i / bufferSize;
-            output[i] = (Math.random() * 2 - 1) * Math.sin(Math.PI * t) * 0.78;
+            output[i] = (Math.random() * 2 - 1) * Math.sin(Math.PI * t) * 0.72;
           }
 
           const whiteNoise = ctx.createBufferSource();
@@ -4240,13 +4104,13 @@
           const filter = ctx.createBiquadFilter();
           filter.type = 'bandpass';
           filter.Q.value = 1.4;
-          filter.frequency.setValueAtTime(reverse ? 1150 : 860, now);
-          filter.frequency.exponentialRampToValueAtTime(reverse ? 2250 : 2650, now + 0.12);
-          filter.frequency.exponentialRampToValueAtTime(600, now + duration);
+          filter.frequency.setValueAtTime(reverse ? 1150 : 880, now);
+          filter.frequency.exponentialRampToValueAtTime(reverse ? 2200 : 2600, now + 0.1);
+          filter.frequency.exponentialRampToValueAtTime(620, now + duration);
 
           const gain = ctx.createGain();
           gain.gain.setValueAtTime(0.001, now);
-          gain.gain.linearRampToValueAtTime(0.24, now + 0.05);
+          gain.gain.linearRampToValueAtTime(0.22, now + 0.04);
           gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
 
           whiteNoise.connect(filter);
@@ -4272,23 +4136,23 @@
           osc.frequency.setValueAtTime(finalTick ? 880 : 540, now);
           g.gain.setValueAtTime(0.001, now);
           g.gain.linearRampToValueAtTime(finalTick ? 0.14 : 0.05, now + 0.01);
-          g.gain.exponentialRampToValueAtTime(0.001, now + (finalTick ? 0.28 : 0.08));
+          g.gain.exponentialRampToValueAtTime(0.001, now + (finalTick ? 0.25 : 0.07));
           osc.connect(g);
           g.connect(ctx.destination);
           osc.start(now);
-          osc.stop(now + (finalTick ? 0.3 : 0.09));
+          osc.stop(now + (finalTick ? 0.27 : 0.08));
         } catch (e) {}
       }
 
       /* --------------------------------------------------------------------
-         6. TOAST & HINT
+         3. TOAST & HINT
          -------------------------------------------------------------------- */
       let toastTimer = null;
       function showToast(msg) {
         studioToast.textContent = msg;
         studioToast.classList.add('show');
         clearTimeout(toastTimer);
-        toastTimer = setTimeout(() => studioToast.classList.remove('show'), 2200);
+        toastTimer = setTimeout(() => studioToast.classList.remove('show'), 2000);
       }
 
       function dismissHint() {
@@ -4299,7 +4163,7 @@
       }
 
       /* --------------------------------------------------------------------
-         7. 3D BOOK RENDERING & NAVIGATION (10 PAGES / 5 LEAVES)
+         4. FAST 3D BOOK RENDERING & NAVIGATION
          -------------------------------------------------------------------- */
       function getFlippedCountForPage(pageNum) {
         return Math.floor(pageNum / 2);
@@ -4338,7 +4202,7 @@
           bookShadow.style.width = '100%';
         }
 
-        const edgeUnit = Math.max(2, 2.8 * state.pageScale);
+        const edgeUnit = Math.max(2, 2.6 * state.pageScale);
         const leftThickness  = (TOTAL_LEAVES - flippedCount) * edgeUnit;
         const rightThickness = flippedCount * edgeUnit;
 
@@ -4357,9 +4221,9 @@
           if (shouldBeFlipped !== wasFlipped) {
             leaf.classList.add('turning');
             leaf.style.zIndex = 30 + (shouldBeFlipped ? idx : (TOTAL_LEAVES - idx));
-            leaf.style.setProperty('--shade-opacity', '0.55');
+            leaf.style.setProperty('--shade-opacity', '0.5');
 
-            const delay = animateCascade ? Math.min(Math.abs(idx - flippedCount) * 60, 170) : 0;
+            const delay = animateCascade ? Math.min(Math.abs(idx - flippedCount) * 35, 105) : 0;
             setTimeout(() => {
               leaf.classList.toggle('flipped', shouldBeFlipped);
               leaf.style.transform = shouldBeFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)';
@@ -4369,7 +4233,7 @@
               leaf.classList.remove('turning');
               leaf.style.setProperty('--shade-opacity', '0');
               leaf.style.zIndex = shouldBeFlipped ? (1 + idx) : (TOTAL_LEAVES - idx);
-            }, 840 + delay);
+            }, 500 + delay);
           } else {
             leaf.style.transform = shouldBeFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)';
             leaf.style.zIndex = shouldBeFlipped ? (1 + idx) : (TOTAL_LEAVES - idx);
@@ -4469,7 +4333,7 @@
       }
 
       /* --------------------------------------------------------------------
-         8. DRAG-TO-FLIP, MOBILE SWIPE, PINCH-ZOOM & PAN-WHEN-ZOOMED
+         5. DRAG-TO-FLIP, MOBILE SWIPE, PINCH-ZOOM & PAN
          -------------------------------------------------------------------- */
       function isInteractiveTarget(target) {
         return Boolean(target.closest('.interactive, input, textarea, button, a, label'));
@@ -4586,7 +4450,7 @@
           return;
         }
 
-        const effectiveWidth = state.renderW * 0.88;
+        const effectiveWidth = state.renderW * 0.85;
 
         if ((drag.mode === 'flip-next' || (drag.mode === 'single-odd' && dx > 0)) && drag.leaf && drag.moved) {
           const progress = Math.max(0, Math.min(1, dx / effectiveWidth));
@@ -4594,14 +4458,14 @@
           drag.leaf.classList.add('dragging');
           drag.leaf.style.zIndex = 50;
           drag.leaf.style.transform = `rotateY(${drag.currentAngle.toFixed(1)}deg)`;
-          drag.leaf.style.setProperty('--shade-opacity', (Math.sin(progress * Math.PI) * 0.62).toFixed(2));
+          drag.leaf.style.setProperty('--shade-opacity', (Math.sin(progress * Math.PI) * 0.56).toFixed(2));
         } else if ((drag.mode === 'flip-prev' || (drag.mode === 'single-even' && dx < 0)) && drag.leaf && drag.moved) {
           const progress = Math.max(0, Math.min(1, (-dx) / effectiveWidth));
           drag.currentAngle = 180 - progress * 180;
           drag.leaf.classList.add('dragging');
           drag.leaf.style.zIndex = 50;
           drag.leaf.style.transform = `rotateY(${drag.currentAngle.toFixed(1)}deg)`;
-          drag.leaf.style.setProperty('--shade-opacity', (Math.sin(progress * Math.PI) * 0.62).toFixed(2));
+          drag.leaf.style.setProperty('--shade-opacity', (Math.sin(progress * Math.PI) * 0.56).toFixed(2));
         }
       }
 
@@ -4627,7 +4491,7 @@
         }
 
         if (drag.mode === 'single-odd' || drag.mode === 'single-even') {
-          if (Math.abs(dx) > 38) {
+          if (Math.abs(dx) > 36) {
             if (dx > 0) nextPage();
             else prevPage();
           } else if (!drag.moved) {
@@ -4649,10 +4513,10 @@
           else if (drag.mode === 'flip-prev') prevPage();
         } else {
           if (drag.mode === 'flip-next') {
-            if (drag.currentAngle > 46) nextPage();
+            if (drag.currentAngle > 42) nextPage();
             else renderBook(false);
           } else if (drag.mode === 'flip-prev') {
-            if (drag.currentAngle < 134) prevPage();
+            if (drag.currentAngle < 138) prevPage();
             else renderBook(false);
           }
         }
@@ -4670,7 +4534,7 @@
       window.addEventListener('touchend', onPointerUp, { passive: true });
 
       /* --------------------------------------------------------------------
-         9. TOOLBAR, TOC, QR MODAL, DISCRETE ZOOM & KEYBOARD
+         6. TOOLBAR, TOC, QR MODAL, ZOOM & KEYBOARD
          -------------------------------------------------------------------- */
       TOC_ITEMS.forEach(item => {
         const btn = document.createElement('button');
@@ -4723,6 +4587,13 @@
         btnBackShare.addEventListener('click', (e) => {
           e.stopPropagation();
           openQrModal();
+        });
+      }
+
+      if (btnBackToCover) {
+        btnBackToCover.addEventListener('click', (e) => {
+          e.stopPropagation();
+          goToPage(1);
         });
       }
 
@@ -4826,7 +4697,7 @@
         const isLight = document.body.classList.toggle('theme-light');
         document.getElementById('iconSun').style.display = isLight ? 'none' : 'block';
         document.getElementById('iconMoon').style.display = isLight ? 'block' : 'none';
-        showToast(isLight ? 'وضع الاستوديو الفاتح' : 'وضع الاستوديو الملكي الداكن');
+        showToast(isLight ? 'وضع الاستوديو الفاتح' : 'وضع الاستوديو الداكن');
       });
 
       btnFullscreen.addEventListener('click', () => {
@@ -4852,9 +4723,8 @@
       });
 
       /* --------------------------------------------------------------------
-         11. INTERACTIVE PAGE WIDGETS (ALL GUARANTEED DEFINED & SAFE)
+         7. INTERACTIVE PAGE WIDGETS
          -------------------------------------------------------------------- */
-      // A) Page 2: Interactive Myth Cards
       document.querySelectorAll('.myth-card').forEach(card => {
         card.addEventListener('click', (e) => {
           e.stopPropagation();
@@ -4864,7 +4734,6 @@
         });
       });
 
-      // B) Page 4: Interactive Morphing Basal / Ultra-Long Curve
       const basalTabs = document.querySelectorAll('.basal-tab');
       const basalCurvePath = document.getElementById('basalCurvePath');
       const basalCurveArea = document.getElementById('basalCurveArea');
@@ -4899,7 +4768,6 @@
         });
       });
 
-      // C) Page 6: Interactive Anatomical Injection Sites Map
       const zoneElements = document.querySelectorAll('[data-zone]');
       const zoneNameEl = document.getElementById('zoneName');
       const zoneTipEl  = document.getElementById('zoneTip');
@@ -4923,7 +4791,6 @@
         el.addEventListener('mouseenter', () => selectZone(el.dataset.zone));
       });
 
-      // D) Page 7: Circular Gold 10-Second Injection Countdown Timer
       const btnTenTimer       = document.getElementById('btnTenTimer');
       const timerLabel        = document.getElementById('timerLabel');
       const timerReadout      = document.getElementById('timerReadout');
@@ -4972,7 +4839,6 @@
         }, 1000);
       });
 
-      // E) Page 8: Fillable "بياناتي" Card (Auto-Save + Manual Save / Clear)
       const STORAGE_KEY = 'insulin_magazine_my_data_v1';
       const fieldIds = ['inpName', 'inpType', 'inpMorning', 'inpNoon', 'inpNight', 'inpDoctor'];
       const saveStatus = document.getElementById('saveStatus');
@@ -5031,11 +4897,10 @@
       });
 
       document.getElementById('myDataCard').addEventListener('click', (e) => e.stopPropagation());
-      document.querySelectorAll('.emg-call-btn').forEach(link => {
+      document.querySelectorAll('.emg-call-btn, .back-emg-pill').forEach(link => {
         link.addEventListener('click', (e) => e.stopPropagation());
       });
 
-      // F) Page 9: Interactive Daily Travel & Safety Kit Checklist
       const kitItems = document.querySelectorAll('.kit-item');
       const kitCounter = document.getElementById('kitCounter');
       kitItems.forEach(btn => {
@@ -5051,24 +4916,29 @@
       });
 
       /* --------------------------------------------------------------------
-         12. RESPONSIVE RESIZE & INITIALIZATION
+         8. RESPONSIVE RESIZE & INITIALIZATION
          -------------------------------------------------------------------- */
+      let resizeRaf = null;
       function handleViewportChange() {
-        const vw = window.visualViewport ? window.visualViewport.width : window.innerWidth;
-        if (!state.userForcedMode) {
-          const shouldBeSingle = vw < 860;
-          if (shouldBeSingle !== state.singleMode) {
-            state.singleMode = shouldBeSingle;
-            renderBook(false);
+        if (resizeRaf) return;
+        resizeRaf = requestAnimationFrame(() => {
+          resizeRaf = null;
+          const vw = window.visualViewport ? window.visualViewport.width : window.innerWidth;
+          if (!state.userForcedMode) {
+            const shouldBeSingle = vw < 860;
+            if (shouldBeSingle !== state.singleMode) {
+              state.singleMode = shouldBeSingle;
+              renderBook(false);
+            }
           }
-        }
-        resizeBook();
+          resizeBook();
+        });
       }
 
-      window.addEventListener('resize', handleViewportChange);
-      window.addEventListener('orientationchange', () => setTimeout(handleViewportChange, 120));
+      window.addEventListener('resize', handleViewportChange, { passive: true });
+      window.addEventListener('orientationchange', () => setTimeout(handleViewportChange, 100));
       if (window.visualViewport) {
-        window.visualViewport.addEventListener('resize', handleViewportChange);
+        window.visualViewport.addEventListener('resize', handleViewportChange, { passive: true });
       }
 
       loadPersonalData();
