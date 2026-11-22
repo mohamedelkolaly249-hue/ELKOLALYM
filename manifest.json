@@ -1,0 +1,27 @@
+{
+  "id": "/",
+  "name": "الأنسولين صديقك مش عدوك — جامعة المنصورة الأهلية",
+  "short_name": "دليل الأنسولين",
+  "description": "مجلة توعية تفاعلية 3D لمرضى السكر وأسرهم — كلية الصيدلة، جامعة المنصورة الأهلية",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "dir": "rtl",
+  "lang": "ar",
+  "background_color": "#06142E",
+  "theme_color": "#06142E",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
